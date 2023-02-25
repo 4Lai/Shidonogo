@@ -14,6 +14,7 @@ import { BooksRecomendedComponent } from './shared/components/books-recomended/b
 import { FeaturedBookComponent } from './shared/components/featured-book/featured-book.component';
 import { FeaturedMangaComponent } from './shared/components/featured-manga/featured-manga.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LinkComponent } from './shared/components/link/link.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { HttpClientModule } from '@angular/common/http';
     BooksRecomendedComponent,
     FeaturedBookComponent,
     FeaturedMangaComponent,
+    LinkComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

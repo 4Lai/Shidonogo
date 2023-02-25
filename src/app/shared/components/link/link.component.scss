@@ -1,0 +1,27 @@
+.featured--links {
+  font-size: 2.5rem;
+  text-decoration: none;
+  color: black;
+  padding: 0.1rem 1rem 0.1rem 1rem;
+  font-weight: 300;
+  &:hover {
+    color: rgba(255, 0, 0, 0.37);
+    text-decoration: underline;
+    transition: 0.25s;
+  }
+}
+
+.featured--links-shonen {
+  background-color: rgb(255, 166, 0);
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  font-size: 2.5rem;
+  padding: 0.1rem 1rem 0.1rem 1rem;
+  font-weight: 500;
+  &:hover {
+    background-color: rgb(255, 210, 0);
+    text-decoration: underline;
+    transition: 0.25s;
+  }
+}

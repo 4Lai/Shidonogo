@@ -1,0 +1,91 @@
+@import "../link/link.component.scss";
+.featured {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  margin-bottom: 0.7rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  &--container {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &--heading {
+    font-size: 14rem;
+    letter-spacing: -0.25rem;
+    font-weight: 700;
+    line-height: 1.1;
+    overflow: hidden;
+    margin-bottom: 2rem;
+  }
+
+  &--subheading {
+    font-size: 6rem;
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+    line-height: 1.1;
+    overflow: hidden;
+    margin-bottom: 3rem;
+  }
+
+  &--read--container {
+    margin-bottom: 3.5rem;
+  }
+
+  &--read {
+    display: flex;
+    max-width: fit-content;
+    gap: 0.5rem;
+    font-size: 2.5rem;
+    text-decoration: none;
+    font-weight: 300;
+    color: black;
+    &:hover {
+      color: rgba(255, 0, 0, 0.37);
+      text-decoration: underline;
+      transition: 0.25s;
+    }
+  }
+
+  &--icon-arr {
+    width: 24px;
+    height: 24px;
+  }
+
+  &--toggle-text {
+    font-size: 3rem;
+    font-weight: 300;
+    overflow: hidden;
+  }
+
+  &--trailer--container {
+    display: flex;
+  }
+
+  &--trailer--btn {
+    max-width: fit-content;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    padding: 1.5rem 2.5rem;
+    color: #f2f2f2;
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: 700;
+    &:hover {
+      background-color: brown;
+      transition: 0.25s;
+    }
+  }
+
+  &--icon {
+    width: 40px;
+    height: 40px;
+  }
+}
