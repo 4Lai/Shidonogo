@@ -15,6 +15,8 @@ import { FeaturedBookComponent } from './shared/components/featured-book/feature
 import { FeaturedMangaComponent } from './shared/components/featured-manga/featured-manga.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LinkComponent } from './shared/components/link/link.component';
+import { ModalComponent } from './shared/components/modal/modal.component';
+import { IframeComponent } from './shared/components/iframe/iframe.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { LinkComponent } from './shared/components/link/link.component';
     FeaturedBookComponent,
     FeaturedMangaComponent,
     LinkComponent,
+    ModalComponent,
+    IframeComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
