@@ -1,0 +1,70 @@
+.anime-recommended-container {
+  background-image: url("/assets/img/imggg/5265-seriesheaders-op-2000x800_ac25.jpg");
+  margin: 2.5rem auto;
+  margin-bottom: 0;
+  background-repeat: no-repeat;
+  height: 570px;
+  display: flex;
+  flex-direction: column;
+  &--header-container {
+    margin: 2.5rem auto;
+    overflow: hidden;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 2.5rem;
+    padding-bottom: 1rem;
+    &--title {
+      font-size: 4rem;
+      font-weight: 500;
+    }
+    &--link {
+      font-size: 4rem;
+      font-weight: 500;
+      text-decoration: none;
+      color: inherit;
+      &:hover {
+        text-decoration: underline;
+        color: white;
+        transition: 0.25s;
+      }
+    }
+  }
+  &--content-container {
+    margin: 2.5rem auto;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    & img {
+      width: 270px;
+      height: 210px;
+    }
+    &--link {
+      text-decoration: none;
+      &:hover {
+        background-color: red;
+        transition: 0.25s;
+      }
+    }
+    &--text {
+      margin-top: -0.5rem;
+      max-width: 270px;
+      min-height: 75px;
+      background-color: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 25%;
+      overflow: hidden;
+      padding: 2rem;
+    }
+    &--title {
+      max-width: 300px;
+      color: #fff;
+      font-size: 2rem;
+      font-weight: 300;
+      text-align: center;
+    }
+  }
+}

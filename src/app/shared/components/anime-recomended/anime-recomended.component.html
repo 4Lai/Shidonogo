@@ -1,1 +1,16 @@
-<p>anime-recomended works!</p>
+<div class="anime-recommended-container">
+  <div class="anime-recommended-container--header-container">
+    <h4 class="anime-recommended-container--header-container--title">{{animeReccomendedHeaderData[0].h}}</h4>
+    <a href="{{animeReccomendedHeaderData[0].urlButton}}" class="anime-recommended-container--header-container--link">{{animeReccomendedHeaderData[0].btn}}</a>
+  </div>
+  <div class="anime-recommended-container--content-container">
+    <div *ngFor="let el of animeReccomendedContainerData">
+      <a href="{{el.url}}" class="anime-recommended-container--content-container--link">
+        <img src="{{el.img}}" alt="" />
+        <div class="anime-recommended-container--content-container--text">
+          <p class="anime-recommended-container--content-container--title">{{el.title}}</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
