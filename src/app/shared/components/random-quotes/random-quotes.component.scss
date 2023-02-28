@@ -1,0 +1,48 @@
+.random-quotes {
+  width: 60%;
+  height: 100%;
+  margin: 2.5rem auto;
+  &--header-container {
+    width: 60%;
+    margin: 2.5rem auto;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    &--title {
+      align-self: center;
+      font-size: 6rem;
+      font-weight: 500;
+      margin-bottom: 2rem;
+    }
+    &--action {
+      margin-bottom: 2rem;
+      font-weight: 300;
+      font-size: 3.5rem;
+      align-self: center;
+    }
+    &--img {
+      width: 20%;
+      align-self: center;
+      cursor: pointer;
+    }
+  }
+  &--content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &--anime {
+      font-size: 3rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+    &--character {
+      font-size: 3rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+    &--text {
+      font-size: 2.5rem;
+      font-weight: 300;
+    }
+  }
+}
