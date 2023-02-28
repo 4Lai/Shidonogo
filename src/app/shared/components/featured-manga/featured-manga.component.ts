@@ -54,7 +54,7 @@ export class FeaturedMangaComponent {
   }
 
   scroll(el:HTMLElement) {
-    el.scrollIntoView()
+    el.scrollIntoView({behavior:"smooth", block:'center', inline:'center'})
   }
 
 

@@ -1,0 +1,91 @@
+.books-recomended-header {
+  overflow: hidden;
+  width: 60%;
+  margin: 2.5rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &--title {
+    font-size: 5rem;
+    font-weight: 300;
+    overflow: hidden;
+  }
+  &--link {
+    font-size: 2.5rem;
+    align-self: flex-end;
+    text-decoration: none;
+    color: inherit;
+    font-weight: 300;
+    &:hover {
+      color: red;
+      text-decoration: underline;
+      transition: 0.25s;
+    }
+  }
+}
+
+
+.books-recomended-container {
+  width: 60%;
+  margin: 2.5rem auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8rem;
+  &--el-container {
+    min-width: 250px;
+    max-width: 250px;
+  }
+  &--img-hover:hover img {
+    transform: scale(1.05);
+    transition: 0.5s;
+  }
+  &--img-container {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    padding: 4rem 8rem 2rem 8rem;
+  }
+  &--img {
+    max-height: 200px;
+  }
+}
+
+.books-recomended-text-container {
+  background-color: white;
+  padding: 0;
+  height: 100%;
+  vertical-align: text-top;
+  &--type {
+    font-size: 3rem;
+    padding: 0.5rem 3rem 0 3rem;
+    color: #a1a1a1;
+  }
+  &--p {
+    font-size: 1.7rem;
+    overflow-wrap: break-word;
+    padding: 0 3rem 3rem 3rem;
+    font-weight: 400;
+  }
+  &--title {
+    text-decoration: none;
+    color: inherit;
+    overflow-wrap: break-word;
+    &:hover {
+      color: red;
+      transition: 0.25s;
+      text-decoration: underline;
+      overflow: hidden;
+    }
+  }
+
+
+}
+
+
+
+
+
+
+
+
