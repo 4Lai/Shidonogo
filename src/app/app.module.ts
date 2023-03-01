@@ -17,25 +17,27 @@ import { HttpClientModule } from '@angular/common/http';
 import { LinkComponent } from './shared/components/link/link.component';
 import { ModalComponent } from './shared/components/modal/modal.component';
 import { IframeComponent } from './shared/components/iframe/iframe.component';
+import {RandomQuotesContentComponent} from "./shared/components/random-quotes-content/random-quotes-content.component";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    AnimeListComponent,
-    AnimeSingleComponent,
-    NotFoundComponent,
-    HeaderComponent,
-    FooterComponent,
-    RandomQuotesComponent,
-    AnimeRecomendedComponent,
-    BooksRecomendedComponent,
-    FeaturedBookComponent,
-    FeaturedMangaComponent,
-    LinkComponent,
-    ModalComponent,
-    IframeComponent,
-  ],
+    declarations: [
+        AppComponent,
+        HomeComponent,
+        AnimeListComponent,
+        AnimeSingleComponent,
+        NotFoundComponent,
+        HeaderComponent,
+        FooterComponent,
+        RandomQuotesComponent,
+        AnimeRecomendedComponent,
+        BooksRecomendedComponent,
+        FeaturedBookComponent,
+        FeaturedMangaComponent,
+        LinkComponent,
+        ModalComponent,
+        IframeComponent,
+        RandomQuotesContentComponent,
+    ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],

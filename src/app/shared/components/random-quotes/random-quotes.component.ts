@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
 import {RandomQuotesService} from "../../services/random-quotes.service";
 import {take} from "rxjs";
 
@@ -8,6 +8,8 @@ import {take} from "rxjs";
   styleUrls: ['./random-quotes.component.scss']
 })
 export class RandomQuotesComponent {
+  @ViewChild('action') h5:any;
+
   randomQuotesData:{title:string, action:string, img:string}[] = [
     {
       title: "Random quotes from anime!",
@@ -17,16 +19,17 @@ export class RandomQuotesComponent {
   ];
 
   constructor(private randomQuotesService: RandomQuotesService) {}
-
   myData: any;
 
   randomQuotes() {
+
     this.randomQuotesService.getRandomQuotesData().pipe(take(1)).subscribe((data) => {
       this.myData = data;
     })
     document.querySelector(`.random-quotes--header-container--action`)!.textContent = 'Try again!'
+
   }
-  scroll(el:HTMLElement) {
-    el.scrollIntoView({behavior:"smooth", block:'center', inline:'center'})
+  scroll(el: HTMLElement) {
+    el.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" })
   }
 }

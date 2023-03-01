@@ -1,12 +1,10 @@
 <div class="random-quotes">
   <div class="random-quotes--header-container">
     <h4 class="random-quotes--header-container--title">{{randomQuotesData[0].title}}</h4>
-    <h5 class="random-quotes--header-container--action">{{randomQuotesData[0].action}}</h5>
+    <h5 #action class="random-quotes--header-container--action">{{randomQuotesData[0].action}}</h5>
     <img class="random-quotes--header-container--img" (click)="scroll(target)" (click)="randomQuotes()" src="{{randomQuotesData[0].img}}" alt="" />
   </div>
-  <div #target class="random-quotes--content-container">
-    <h3 class="random-quotes--content-container--anime">Anime: {{myData.anime}}</h3>
-    <h4 class="random-quotes--content-container--character">Character: {{myData.character}}</h4>
-    <p class="random-quotes--content-container--text">Quote: {{myData.quote}}</p>
+  <div #target>
+    <app-random-quotes-content [myData]="myData"></app-random-quotes-content>
   </div>
 </div>
