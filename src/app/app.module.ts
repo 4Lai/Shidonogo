@@ -18,6 +18,8 @@ import { LinkComponent } from './shared/components/link/link.component';
 import { ModalComponent } from './shared/components/modal/modal.component';
 import { IframeComponent } from './shared/components/iframe/iframe.component';
 import {RandomQuotesContentComponent} from "./shared/components/random-quotes-content/random-quotes-content.component";
+import { LinkFooterComponent } from './shared/components/link-footer/link-footer.component';
+import { NavComponent } from './shared/components/nav/nav.component';
 
 @NgModule({
     declarations: [
@@ -37,6 +39,8 @@ import {RandomQuotesContentComponent} from "./shared/components/random-quotes-co
         ModalComponent,
         IframeComponent,
         RandomQuotesContentComponent,
+        LinkFooterComponent,
+        NavComponent,
     ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

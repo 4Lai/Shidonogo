@@ -4,7 +4,7 @@
     <h5 #action class="random-quotes--header-container--action">{{randomQuotesData[0].action}}</h5>
     <img class="random-quotes--header-container--img" (click)="scroll(target)" (click)="randomQuotes()" src="{{randomQuotesData[0].img}}" alt="" />
   </div>
-  <div #target>
+  <div class="random-quotes--content" #target>
     <app-random-quotes-content [myData]="myData"></app-random-quotes-content>
   </div>
 </div>

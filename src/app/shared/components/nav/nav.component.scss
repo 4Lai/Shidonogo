@@ -1,0 +1,64 @@
+.navigation {
+  background-color: rgb(54, 54, 54);
+  top: 0;
+  position: sticky;
+  z-index: 9999;
+  opacity: 0.95;
+    &--top-nav {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: auto;
+      &--links {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 2rem;
+        &--logo {
+          width: 8rem;
+          left: 8%;
+          top: 0;
+          cursor: pointer;
+        }
+        & a {
+          color: #f2f2f2;
+          text-align: center;
+          padding: 2rem 2rem;
+          text-decoration: none;
+          font-size: 2rem;
+          font-weight: 500;
+          &:hover {
+            background-color: green;
+            color: #f2f2f2;
+          }
+        }
+      }
+      &--clock {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1rem;
+        text-align: center;
+        &--time {
+          font-size: 2rem;
+          color: white;
+          justify-content: center;
+          align-items: center;
+          font-weight: 500;
+        }
+          &--icon {
+            width: 24px;
+            height: 24px;
+            color: white;
+          }
+      }
+  }
+}
+
+
+
+
+
+
+

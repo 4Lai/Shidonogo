@@ -1,0 +1,25 @@
+<nav class="navigation">
+  <div class="navigation--top-nav">
+    <div class="navigation--top-nav--links">
+      <img (click)="scrollTo()" src="assets/img/kimetsunoyaiba.png" class="navigation--top-nav--links--logo" alt="" />
+      <a *ngFor="let el of dataLinks" href="{{el.url}}">{{el.title}}</a>
+    </div>
+    <div class="navigation--top-nav--clock">
+      <div class="navigation--top-nav--clock--time">{{date}}</div>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="navigation--top-nav--clock--icon"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+        />
+      </svg>
+    </div>
+  </div>
+</nav>
