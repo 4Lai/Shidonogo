@@ -24,7 +24,7 @@ export class RandomQuotesComponent {
     this.randomQuotesService.getRandomQuotesData().pipe(take(1)).subscribe((data) => {
       this.myData = data;
     })
-    document.querySelector(`.section-five-action`)!.textContent = 'Try again!'
+    document.querySelector(`.random-quotes--header-container--action`)!.textContent = 'Try again!'
   }
   scroll(el:HTMLElement) {
     el.scrollIntoView({behavior:"smooth", block:'center', inline:'center'})
