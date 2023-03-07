@@ -1,8 +1,15 @@
 <nav class="navigation">
   <div class="navigation--top-nav">
-    <div class="navigation--top-nav--links">
+    <div class="navigation--top-nav--links" (clickOutside)="clickedOutside()">
       <img (click)="scrollTo()" src="assets/img/kimetsunoyaiba.png" class="navigation--top-nav--links--logo" alt="" />
-      <a (click)="toggleMenu()" *ngFor="let el of dataLinks" href="{{el.url}}">{{el.title}}</a>
+      <div class="zz" *ngFor="let el of dataLinks; let i = index">
+          <button (click)="clickedIndex = i">{{el.title}}</button>
+        <div *ngIf="clickedIndex === i" class="z">
+          <a href="">{{el?.dropdown}}</a>
+          <a href="">{{el?.dropdown1}}</a>
+          <a href="">{{el?.dropdown2}}</a>
+        </div>
+      </div>
     </div>
     <div class="navigation--top-nav--clock">
       <div class="navigation--top-nav--clock--time">{{date}}</div>

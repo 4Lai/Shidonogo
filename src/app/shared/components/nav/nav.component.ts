@@ -6,22 +6,30 @@ import { Component } from '@angular/core';
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent {
-  dataLinks:{url:string; title:string;}[] = [
+  dataLinks:{title:string; dropdown: string; dropdown1: string; dropdown2: string;}[] = [
     {
-      url: "#READ",
       title: "READ",
+      dropdown: "Manga",
+      dropdown1: "Novel",
+      dropdown2: "Most popular",
     },
     {
-      url: "#WATCH",
       title: "WATCH",
+      dropdown: "Anime",
+      dropdown1: "Trailer",
+      dropdown2: "Best rated anime",
     },
     {
-      url: "#COMMUNITY",
       title: "COMMUNITY",
+      dropdown: "Fan arts",
+      dropdown1: "Forum",
+      dropdown2: "Discuss",
     },
     {
-      url: "#CALENDAR",
       title: "CALENDAR",
+      dropdown: "Upcoming",
+      dropdown1: "Best of this year",
+      dropdown2: "Upcoming events",
     },
   ];
   scrollTo() {
@@ -37,8 +45,13 @@ export class NavComponent {
   }
 
   isMenuOpened: boolean = false;
+  clickedIndex: number = -1;
 
-  toggleMenu(): void {
-    this.isMenuOpened = !this.isMenuOpened
+  // toggleMenu(): void {
+  //   this.isMenuOpened = !this.isMenuOpened
+  // }
+
+  clickedOutside(): void {
+    this.clickedIndex = -1
   }
 }

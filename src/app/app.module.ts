@@ -20,6 +20,7 @@ import { IframeComponent } from './shared/components/iframe/iframe.component';
 import {RandomQuotesContentComponent} from "./shared/components/random-quotes-content/random-quotes-content.component";
 import { LinkFooterComponent } from './shared/components/link-footer/link-footer.component';
 import { NavComponent } from './shared/components/nav/nav.component';
+import { ClickOutsideDirective } from './click-outside.directive';
 
 @NgModule({
     declarations: [
@@ -41,6 +42,7 @@ import { NavComponent } from './shared/components/nav/nav.component';
         RandomQuotesContentComponent,
         LinkFooterComponent,
         NavComponent,
+        ClickOutsideDirective,
     ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
