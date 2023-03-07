@@ -5,17 +5,18 @@
   &--container {
     padding-top: 3rem;
     display: grid;
-    grid-template-columns: 33.33% 33.33% 33.33%;
-    width: 60%;
+    grid-template-columns: auto auto auto;
     margin-right: auto;
     margin-left: auto;
-    text-align: center;
+    width: 60%;
     height: 220px;
+    justify-content: space-evenly;
       &--link {
         text-decoration: none;
         color: #fff;
         font-size: 2.5rem;
         font-weight: 300;
+        display: block;
         &:hover {
           color: brown;
           transition: 0.25s;

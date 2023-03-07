@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent {
-  dataLinks:{url:string;title:string}[] = [
+  dataLinks:{url:string; title:string;}[] = [
     {
       url: "#READ",
       title: "READ",
@@ -34,5 +34,11 @@ export class NavComponent {
       const currentDate = new Date();
       this.date = currentDate.toLocaleTimeString();
     }, 1000);
+  }
+
+  isMenuOpened: boolean = false;
+
+  toggleMenu(): void {
+    this.isMenuOpened = !this.isMenuOpened
   }
 }

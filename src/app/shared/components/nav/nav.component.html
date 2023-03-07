@@ -2,7 +2,7 @@
   <div class="navigation--top-nav">
     <div class="navigation--top-nav--links">
       <img (click)="scrollTo()" src="assets/img/kimetsunoyaiba.png" class="navigation--top-nav--links--logo" alt="" />
-      <a *ngFor="let el of dataLinks" href="{{el.url}}">{{el.title}}</a>
+      <a (click)="toggleMenu()" *ngFor="let el of dataLinks" href="{{el.url}}">{{el.title}}</a>
     </div>
     <div class="navigation--top-nav--clock">
       <div class="navigation--top-nav--clock--time">{{date}}</div>
