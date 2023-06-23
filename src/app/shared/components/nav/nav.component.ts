@@ -1,48 +1,60 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
-  styleUrls: ['./nav.component.scss']
+  styleUrls: ['./nav.component.scss'],
 })
-export class NavComponent {
-  dataLinks:{title:string; dropdown: string; dropdown1: string; dropdown2: string;}[] = [
+export class NavComponent implements OnInit {
+  dataLinks: {
+    title: string;
+    dropdown: string;
+    dropdown1: string;
+    dropdown2: string;
+  }[] = [
     {
-      title: "READ",
-      dropdown: "Manga",
-      dropdown1: "Novel",
-      dropdown2: "Most popular",
+      title: 'READ',
+      dropdown: 'Manga',
+      dropdown1: 'Novel',
+      dropdown2: 'Most popular',
     },
     {
-      title: "WATCH",
-      dropdown: "Anime",
-      dropdown1: "Trailer",
-      dropdown2: "Best rated anime",
+      title: 'WATCH',
+      dropdown: 'Anime',
+      dropdown1: 'Trailer',
+      dropdown2: 'Best rated anime',
     },
     {
-      title: "COMMUNITY",
-      dropdown: "Fan arts",
-      dropdown1: "Forum",
-      dropdown2: "Discuss",
+      title: 'COMMUNITY',
+      dropdown: 'Fan arts',
+      dropdown1: 'Forum',
+      dropdown2: 'Discuss',
     },
     {
-      title: "CALENDAR",
-      dropdown: "Upcoming",
-      dropdown1: "Best of this year",
-      dropdown2: "Upcoming events",
+      title: 'CALENDAR',
+      dropdown: 'Upcoming',
+      dropdown1: 'Best of this year',
+      dropdown2: 'Upcoming events',
     },
   ];
   scrollTo() {
-    scrollTo({top:0, behavior:"smooth"})
+    if (this.router.url === '/home') {
+      scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      this.router.navigate(['/home']);
+    }
   }
-  date:any = new Date().toLocaleTimeString();
+  date: any = new Date().toLocaleTimeString();
 
-  constructor(){
-    setInterval(() =>{
+  ngOnInit(): void {
+    setInterval(() => {
       const currentDate = new Date();
       this.date = currentDate.toLocaleTimeString();
     }, 1000);
   }
+
+  constructor(private router: Router) {}
 
   isMenuOpened: boolean = false;
   clickedIndex: number = -1;
@@ -52,6 +64,6 @@ export class NavComponent {
   // }
 
   clickedOutside(): void {
-    this.clickedIndex = -1
+    this.clickedIndex = -1;
   }
 }

@@ -2,78 +2,75 @@
   background-color: black;
   top: 0;
   position: sticky;
-  z-index: 9999;
-    &--top-nav {
+  z-index: 9;
+  &--top-nav {
     overflow: hidden;
     display: flex;
     justify-content: space-between;
     width: 60%;
     margin: auto;
-      &--dropdown {
-        position: absolute;
-        display: flex;
-        flex-direction: column;
+    &--dropdown {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      width: 200px;
+      background-color: rgb(54, 54, 54);
+      & a {
+        font-weight: 300;
+        font-size: 2rem;
+        padding: 1rem 0 1rem 0;
+        color: #f3f3f3;
+        text-decoration: none;
         width: 200px;
-        background-color: rgb(54, 54, 54);
-        & a {
-          font-weight: 300;
-          font-size: 2rem;
-          padding: 1rem 0 1rem 0;
-          color: #f3f3f3;
-          text-decoration: none;
-          width: 200px;
-          text-align: center;
-          &:hover {
-            background-color: green;
-            color: #f2f2f2;
-            transition: 0.25s;
-          }
-        }
-      }
-      &--links {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        &--logo {
-          //align-self: start;
-          width: 8rem;
-          cursor: pointer;
-          margin-right: 2rem;
-        }
-        & button {
-          width: 200px;
-          font-family: inherit;
-          border: 0;
-          background-color: inherit;
-          color: #f2f2f2;
-          padding: 2.3rem 2.3rem;
-          font-size: 2rem;
-          font-weight: 500;
-          &:hover {
-            background-color: green;
-            color: #f2f2f2;
-            transition: 0.25s;
-          }
-        }
-      }
-      &--clock {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
         text-align: center;
-        &--time {
-          font-size: 2rem;
-          color: white;
-          justify-content: center;
-          align-items: center;
-          font-weight: 500;
+        &:hover {
+          background-color: green;
+          color: #f2f2f2;
+          transition: 0.25s;
         }
-          &--icon {
-            width: 24px;
-            height: 24px;
-            color: white;
-          }
       }
+    }
+    &--links {
+      display: flex;
+      align-items: center;
+      &--logo {
+        width: 7rem;
+        cursor: pointer;
+        margin-right: 2rem;
+      }
+      & button {
+        width: 200px;
+        font-family: inherit;
+        border: 0;
+        background-color: inherit;
+        color: #f2f2f2;
+        padding: 2.3rem 2.3rem;
+        font-size: 2rem;
+        font-weight: 500;
+        &:hover {
+          background-color: green;
+          color: #f2f2f2;
+          transition: 0.25s;
+        }
+      }
+    }
+    &--clock {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      text-align: center;
+      &--time {
+        font-size: 2rem;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        font-weight: 500;
+      }
+      &--icon {
+        width: 24px;
+        height: 24px;
+        color: white;
+      }
+    }
   }
 }
-

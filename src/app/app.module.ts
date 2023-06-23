@@ -21,6 +21,11 @@ import {RandomQuotesContentComponent} from "./shared/components/random-quotes-co
 import { LinkFooterComponent } from './shared/components/link-footer/link-footer.component';
 import { NavComponent } from './shared/components/nav/nav.component';
 import { ClickOutsideDirective } from './click-outside.directive';
+import { ShonenJumpComponent } from './shared/components/shonen-jump/shonen-jump.component';
+import { ComedyComponent } from './shared/components/comedy/comedy.component';
+import { RomanceComponent } from './shared/components/romance/romance.component';
+import { MusicComponent } from './shared/components/music/music.component';
+import { AdventureComponent } from './shared/components/adventure/adventure.component';
 
 @NgModule({
     declarations: [
@@ -43,6 +48,11 @@ import { ClickOutsideDirective } from './click-outside.directive';
         LinkFooterComponent,
         NavComponent,
         ClickOutsideDirective,
+        ShonenJumpComponent,
+        ComedyComponent,
+        RomanceComponent,
+        MusicComponent,
+        AdventureComponent,
     ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

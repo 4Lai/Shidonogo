@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {PopUpService} from "../../services/pop-up.service";
-import {IframeComponent} from "../iframe/iframe.component";
+import { PopUpService } from '../../services/pop-up.service';
+import { IframeComponent } from '../iframe/iframe.component';
 
 @Component({
   selector: 'app-featured-manga',
@@ -8,20 +8,34 @@ import {IframeComponent} from "../iframe/iframe.component";
   styleUrls: ['./featured-manga.component.scss'],
 })
 export class FeaturedMangaComponent {
-
-  constructor(private popUpService:PopUpService) {
-  }
+  constructor(private popUpService: PopUpService) {}
   featuredMangaLinkData: { title: string; url: string; cssClasses: string }[] =
     [
       {
         title: 'SHONEN JUMP',
-        url: '#',
+        url: 'anime-list/shonen-jump',
         cssClasses: 'featured--links-shonen',
       },
-      { title: 'Comedy', url: '#', cssClasses: 'featured--links' },
-      { title: 'Romance', url: '#', cssClasses: 'featured--links' },
-      { title: 'Music', url: '#', cssClasses: 'featured--links' },
-      { title: 'Adventure', url: '#', cssClasses: 'featured--links' },
+      {
+        title: 'Comedy',
+        url: 'anime-list/comedy',
+        cssClasses: 'featured--links',
+      },
+      {
+        title: 'Romance',
+        url: 'anime-list/romance',
+        cssClasses: 'featured--links',
+      },
+      {
+        title: 'Music',
+        url: 'anime-list/music',
+        cssClasses: 'featured--links',
+      },
+      {
+        title: 'Adventure',
+        url: 'anime-list/adventure',
+        cssClasses: 'featured--links',
+      },
     ];
 
   featuredMangaRestData: {
@@ -48,14 +62,15 @@ export class FeaturedMangaComponent {
     this.isIconUp = !this.isIconUp;
   }
 
-
   open() {
-    this.popUpService.openModal(IframeComponent)
+    this.popUpService.openModal(IframeComponent);
   }
 
-  scroll(el:HTMLElement) {
-    el.scrollIntoView({behavior:"smooth", block:'center', inline:'center'})
+  scroll(el: HTMLElement) {
+    el.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center',
+      inline: 'center',
+    });
   }
-
-
 }
