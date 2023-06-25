@@ -12,7 +12,7 @@ export class ComedyComponent {
 
   comedyData = this.http
     .get<{ data: any[]; pagination: any[] }>(
-      'https://api.jikan.moe/v4/anime?q=comedy&sfw'
+      `https://api.jikan.moe/v4/anime?q=comedy&sfw`
     )
     .pipe(
       map((val) => {

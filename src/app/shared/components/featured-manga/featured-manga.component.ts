@@ -9,34 +9,44 @@ import { IframeComponent } from '../iframe/iframe.component';
 })
 export class FeaturedMangaComponent {
   constructor(private popUpService: PopUpService) {}
-  featuredMangaLinkData: { title: string; url: string; cssClasses: string }[] =
-    [
-      {
-        title: 'SHONEN JUMP',
-        url: 'anime-list/shonen-jump',
-        cssClasses: 'featured--links-shonen',
-      },
-      {
-        title: 'Comedy',
-        url: 'anime-list/comedy',
-        cssClasses: 'featured--links',
-      },
-      {
-        title: 'Romance',
-        url: 'anime-list/romance',
-        cssClasses: 'featured--links',
-      },
-      {
-        title: 'Music',
-        url: 'anime-list/music',
-        cssClasses: 'featured--links',
-      },
-      {
-        title: 'Adventure',
-        url: 'anime-list/adventure',
-        cssClasses: 'featured--links',
-      },
-    ];
+
+  featuredMangaLinkData: {
+    title: string;
+    url: string;
+    cssClasses: string;
+    genre: string;
+  }[] = [
+    {
+      title: 'SHONEN JUMP',
+      url: '/anime-list/shonen-jump',
+      cssClasses: 'featured--links-shonen',
+      genre: 'shonen',
+    },
+    {
+      title: 'Comedy',
+      url: '/anime-list/comedy',
+      cssClasses: 'featured--links',
+      genre: 'comedy',
+    },
+    {
+      title: 'Romance',
+      url: '/anime-list/romance',
+      cssClasses: 'featured--links',
+      genre: 'romance',
+    },
+    {
+      title: 'Music',
+      url: '/anime-list/music',
+      cssClasses: 'featured--links',
+      genre: 'music',
+    },
+    {
+      title: 'Adventure',
+      url: '/anime-list/adventure',
+      cssClasses: 'featured--links',
+      genre: 'adventure',
+    },
+  ];
 
   featuredMangaRestData: {
     title: string;
