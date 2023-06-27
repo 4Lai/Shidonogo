@@ -22,4 +22,6 @@ export class SingleRecommendedComponent implements OnInit {
   ngOnInit() {
     this.service.getAnimeList(this.genre);
   }
+
+  sortOnClick() {}
 }

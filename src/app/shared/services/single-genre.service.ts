@@ -26,4 +26,6 @@ export class SingleGenreService {
   setGenreAnimeListSignal(data: any[]) {
     this.genreAnimeListSignal.set(data);
   }
+
+  sortBy() {}
 }
