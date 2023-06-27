@@ -38,9 +38,12 @@ export class NavComponent implements OnInit {
       dropdown2: 'Upcoming events',
     },
   ];
+
+  constructor(private router: Router) {}
+
   scrollTo() {
     if (this.router.url === '/home') {
-      scrollTo({ top: 0, behavior: 'smooth' });
+      window.location.reload();
     } else {
       this.router.navigate(['/home']);
     }
@@ -53,8 +56,6 @@ export class NavComponent implements OnInit {
       this.date = currentDate.toLocaleTimeString();
     }, 1000);
   }
-
-  constructor(private router: Router) {}
 
   isMenuOpened: boolean = false;
   clickedIndex: number = -1;

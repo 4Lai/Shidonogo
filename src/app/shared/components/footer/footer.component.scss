@@ -10,16 +10,16 @@
     width: 60%;
     height: 220px;
     justify-content: space-evenly;
-      &--link {
-        text-decoration: none;
-        color: #fff;
-        font-size: 2.5rem;
-        font-weight: 300;
-        display: block;
-        &:hover {
-          color: brown;
-          transition: 0.25s;
-        }
+    &--link {
+      text-decoration: none;
+      color: #fff;
+      font-size: 2.5rem;
+      font-weight: 300;
+      display: block;
+      &:hover {
+        color: brown;
+        transition: 0.25s;
       }
     }
   }
+}

@@ -1,11 +1,26 @@
-<div class="comedy-container-parent">
-  <h1>Recommended comedy anime</h1>
-  <div
-    class="comedy-container"
-    *ngIf="comedyData | async as comedyData; else loading"
-  >
-    <div class="comedy-single" *ngFor="let el of comedyData">
-      <div class="comedy-single-smaller-container">
+<div class="single-container-parent">
+  <h1>Recommended {{ genre }} anime</h1>
+  <hr />
+  <div class="single-container-sort">
+    <p class="single-container-sort-text">Sort by rate</p>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="genre-single-icon"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18"
+      />
+    </svg>
+  </div>
+  <div class="single-container" *ngIf="comedyData(); else loading">
+    <div class="genre-single" *ngFor="let el of comedyData()">
+      <div class="genre-single-smaller-container">
         <p>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -13,7 +28,7 @@
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="comedy-single-icon"
+            class="genre-single-icon"
           >
             <path
               stroke-linecap="round"
@@ -22,15 +37,15 @@
             />
           </svg>
         </p>
-        <p class="comedy-single-score">{{ el.score }}</p>
+        <p class="genre-single-score">{{ el.score }}</p>
       </div>
       <img
-        class="comedy-single-img"
+        class="genre-single-img"
         loading="lazy"
         src="{{ el.images.jpg.image_url }}"
         alt=""
       />
-      <p class="comedy-single-title">{{ el.title }}</p>
+      <p class="genre-single-title">{{ el.title }}</p>
     </div>
   </div>
 </div>

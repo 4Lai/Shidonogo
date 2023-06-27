@@ -7,3 +7,17 @@
 @import "app/shared/components/random-quotes/random-quotes.component";
 @import "app/shared/components/footer/footer.component";
 @import "app/shared/components/nav/nav.component";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: #f1f1f1;
+  font-family: "Oswald", sans-serif;
+  overflow: hidden;
+}

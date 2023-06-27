@@ -17,43 +17,35 @@ import { HttpClientModule } from '@angular/common/http';
 import { LinkComponent } from './shared/components/link/link.component';
 import { ModalComponent } from './shared/components/modal/modal.component';
 import { IframeComponent } from './shared/components/iframe/iframe.component';
-import {RandomQuotesContentComponent} from "./shared/components/random-quotes-content/random-quotes-content.component";
+import { RandomQuotesContentComponent } from './shared/components/random-quotes-content/random-quotes-content.component';
 import { LinkFooterComponent } from './shared/components/link-footer/link-footer.component';
 import { NavComponent } from './shared/components/nav/nav.component';
 import { ClickOutsideDirective } from './click-outside.directive';
-import { ShonenJumpComponent } from './shared/components/shonen-jump/shonen-jump.component';
-import { ComedyComponent } from './shared/components/comedy/comedy.component';
-import { RomanceComponent } from './shared/components/romance/romance.component';
-import { MusicComponent } from './shared/components/music/music.component';
-import { AdventureComponent } from './shared/components/adventure/adventure.component';
+import { SingleRecommendedComponent } from './shared/components/single-recommended/single-recommended.component';
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        HomeComponent,
-        AnimeListComponent,
-        AnimeSingleComponent,
-        NotFoundComponent,
-        HeaderComponent,
-        FooterComponent,
-        RandomQuotesComponent,
-        AnimeRecomendedComponent,
-        BooksRecomendedComponent,
-        FeaturedBookComponent,
-        FeaturedMangaComponent,
-        LinkComponent,
-        ModalComponent,
-        IframeComponent,
-        RandomQuotesContentComponent,
-        LinkFooterComponent,
-        NavComponent,
-        ClickOutsideDirective,
-        ShonenJumpComponent,
-        ComedyComponent,
-        RomanceComponent,
-        MusicComponent,
-        AdventureComponent,
-    ],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    AnimeListComponent,
+    AnimeSingleComponent,
+    NotFoundComponent,
+    HeaderComponent,
+    FooterComponent,
+    RandomQuotesComponent,
+    AnimeRecomendedComponent,
+    BooksRecomendedComponent,
+    FeaturedBookComponent,
+    FeaturedMangaComponent,
+    LinkComponent,
+    ModalComponent,
+    IframeComponent,
+    RandomQuotesContentComponent,
+    LinkFooterComponent,
+    NavComponent,
+    ClickOutsideDirective,
+    SingleRecommendedComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
