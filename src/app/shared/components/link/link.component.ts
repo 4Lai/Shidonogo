@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-link',
@@ -7,4 +8,8 @@ import { Component, Input } from '@angular/core';
 })
 export class LinkComponent {
   @Input() Hero: any;
+
+  route = this.router.url;
+
+  constructor(private router: Router) {}
 }

@@ -1,9 +1,14 @@
 <div class="featured">
-  <app-link *ngFor="let el of featuredMangaLinkData" [Hero]="el"> </app-link>
+  <app-link *ngFor="let el of this.dataFrom.featuredMangaLinkData" [Hero]="el">
+  </app-link>
 </div>
 <div class="featured--container">
-  <h1 class="featured--heading">{{ featuredMangaRestData[0].title }}</h1>
-  <h2 class="featured--subheading">{{ featuredMangaRestData[0].subtitle }}</h2>
+  <h1 class="featured--heading">
+    {{ this.dataFrom.featuredMangaRestData[0].title }}
+  </h1>
+  <h2 class="featured--subheading">
+    {{ this.dataFrom.featuredMangaRestData[0].subtitle }}
+  </h2>
   <div class="featured--read--container">
     <a
       class="featured--read"
@@ -45,7 +50,7 @@
       </div>
     </a>
     <div #target class="featured--toggle-text" [hidden]="divToggle">
-      {{ featuredMangaRestData[0].readMore }}
+      {{ this.dataFrom.featuredMangaRestData[0].readMore }}
     </div>
   </div>
   <div class="featured--trailer--container">

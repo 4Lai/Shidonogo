@@ -3,6 +3,10 @@
   width: 60%;
   margin-left: auto;
   margin-right: auto;
+  &-check {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
 
   .single-container {
     width: 100%;
@@ -14,8 +18,12 @@
     &-sort {
       margin-top: 2rem;
       display: flex;
-      justify-content: flex-end;
+      justify-content: space-between;
       margin-bottom: 4rem;
+      align-items: center;
+      &-single {
+        display: flex;
+      }
       &-text {
         font-size: 1.8rem;
       }
@@ -91,6 +99,9 @@
   }
 }
 
+hr {
+  margin-bottom: 2rem;
+}
 h1 {
   border-top-left-radius: 40px 40px;
   border-bottom-right-radius: 40px 40px;

@@ -1,3 +1,12 @@
-<a routerLink="{{ Hero.url }}" class="{{ Hero.cssClasses }}">
+<a
+  *ngIf="this.route === '/home'; else urlLink"
+  routerLink="{{ Hero.url }}"
+  class="{{ Hero.cssClasses }}"
+>
   {{ Hero.title }}
 </a>
+<ng-template #urlLink>
+  <a href="{{ Hero.url }}" class="{{ Hero.cssClasses }}">
+    {{ Hero.title }}
+  </a>
+</ng-template>
