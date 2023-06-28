@@ -5,9 +5,11 @@
   <div class="single-container-sort">
     <div>
       <app-link
-        *ngFor="let el of this.dataFrom.featuredMangaLinkData"
         [Hero]="el"
-      ></app-link>
+        *ngFor="let el of this.dataFrom.featuredMangaLinkData"
+        (click)="loadDiffData(el.url)"
+      >
+      </app-link>
     </div>
     <div class="single-container-sort-single">
       <p class="single-container-sort-text">Sort by rate</p>

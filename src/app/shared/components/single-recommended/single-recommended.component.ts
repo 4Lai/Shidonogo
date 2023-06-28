@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { SingleGenreService } from '../../services/single-genre.service';
 import { ChangeDetectionStrategy } from '@angular/core';
 import { sortByInt } from '../../helpers/sort-by';
@@ -21,7 +21,8 @@ export class SingleRecommendedComponent implements OnInit {
   constructor(
     private activatedRoute: ActivatedRoute,
     private service: SingleGenreService,
-    private data: FeaturedMangaDataService
+    private data: FeaturedMangaDataService,
+    private route: Router
   ) {}
 
   ngOnInit() {
@@ -33,5 +34,11 @@ export class SingleRecommendedComponent implements OnInit {
     this.service.genreAnimeListSignal.set(
       sortByInt(this.service.genreAnimeListSignal(), 'score', this.swtichSort)
     );
+  }
+
+  loadDiffData(url: string) {
+    this.genre = this.activatedRoute.snapshot.params['genre'];
+    this.service.getAnimeList(this.genre);
+    this.route.navigate([url]);
   }
 }
