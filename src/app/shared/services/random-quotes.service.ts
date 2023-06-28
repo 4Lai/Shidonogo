@@ -7,6 +7,13 @@ import { HttpClient } from '@angular/common/http';
 export class RandomQuotesService {
   constructor(private http: HttpClient) {}
   getRandomQuotesData() {
-    return this.http.get('https://animechan.xyz/api/random');
+    return this.http.get<RandomQuoteInterface>(
+      'https://animechan.xyz/api/random'
+    );
   }
+}
+export interface RandomQuoteInterface {
+  anime: string;
+  character: string;
+  quote: string;
 }
