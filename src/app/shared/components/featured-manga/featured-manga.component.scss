@@ -1,49 +1,104 @@
 @import "../link/link.component.scss";
 .featured {
-  width: 60%;
-  display: flex;
-  align-items: center;
-  gap: 2.5rem;
   margin-bottom: 0.7rem;
-  margin-left: auto;
-  margin-right: auto;
-
-  &--container {
+  align-items: center;
+  margin-left: 1rem;
+  @media only screen and (min-width: 1201px) and (max-width: 2560px) {
+    margin-left: 0;
     width: 60%;
+    display: flex;
+    align-items: center;
     margin-left: auto;
     margin-right: auto;
   }
+  &--container {
+    margin-left: auto;
+    margin-right: auto;
+    @media only screen and (min-width: 1201px) and (max-width: 2560px) {
+      width: 60%;
+    }
+  }
 
   &--heading {
-    font-size: 14rem;
     letter-spacing: -0.25rem;
+    margin-left: 0.6rem;
+    margin-right: 0.6rem;
     font-weight: 700;
     line-height: 1.1;
-    overflow: hidden;
     margin-bottom: 2rem;
+    @media only screen and (min-width: 0px) and (max-width: 375px) {
+      font-size: 5rem;
+    }
+    @media only screen and (min-width: 376px) and (max-width: 640px) {
+      font-size: 6rem;
+    }
+    @media only screen and (min-width: 641px) and (max-width: 960px) {
+      font-size: 8rem;
+    }
+    @media only screen and (min-width: 961px) and (max-width: 1200px) {
+      font-size: 9rem;
+    }
+    @media only screen and (min-width: 1201px) and (max-width: 2560px) {
+      font-size: 11rem;
+      margin-left: 0;
+    }
   }
 
   &--subheading {
-    font-size: 6rem;
+    overflow: visible;
+    margin: 0 0.8rem;
     font-weight: 500;
     letter-spacing: 0.2rem;
     line-height: 1.1;
-    overflow: hidden;
     margin-bottom: 3rem;
+    @media only screen and (min-width: 0px) and (max-width: 375px) {
+      font-size: 2rem;
+    }
+    @media only screen and (min-width: 376px) and (max-width: 640px) {
+      font-size: 3rem;
+    }
+    @media only screen and (min-width: 641px) and (max-width: 960px) {
+      font-size: 4rem;
+    }
+    @media only screen and (min-width: 961px) and (max-width: 1200px) {
+      font-size: 5rem;
+    }
+    @media only screen and (min-width: 1201px) and (max-width: 2560px) {
+      font-size: 6rem;
+      margin-left: 0;
+    }
   }
 
   &--read--container {
     margin-bottom: 3.5rem;
+    margin-left: 0.7rem;
+    @media only screen and (min-width: 1201px) and (max-width: 2560px) {
+      margin-left: 0;
+    }
   }
 
   &--read {
     display: flex;
     max-width: fit-content;
     gap: 0.5rem;
-    font-size: 2.5rem;
     text-decoration: none;
     font-weight: 300;
     color: black;
+    @media only screen and (min-width: 0px) and (max-width: 375px) {
+      font-size: 1.5rem;
+    }
+    @media only screen and (min-width: 376px) and (max-width: 640px) {
+      font-size: 2rem;
+    }
+    @media only screen and (min-width: 641px) and (max-width: 960px) {
+      font-size: 2rem;
+    }
+    @media only screen and (min-width: 961px) and (max-width: 1200px) {
+      font-size: 2.5rem;
+    }
+    @media only screen and (min-width: 1201px) and (max-width: 2560px) {
+      font-size: 2.5rem;
+    }
     cursor: pointer;
     &:hover {
       color: rgba(255, 0, 0, 0.37);
@@ -58,13 +113,35 @@
   }
 
   &--toggle-text {
-    font-size: 3rem;
     font-weight: 300;
-    overflow: hidden;
+    @media only screen and (min-width: 0px) and (max-width: 375px) {
+      font-size: 1.5rem;
+    }
+    @media only screen and (min-width: 376px) and (max-width: 640px) {
+      font-size: 2rem;
+    }
+    @media only screen and (min-width: 641px) and (max-width: 960px) {
+      font-size: 2rem;
+    }
+    @media only screen and (min-width: 961px) and (max-width: 1200px) {
+      font-size: 2.5rem;
+    }
+    @media only screen and (min-width: 1201px) and (max-width: 2560px) {
+      font-size: 3rem;
+    }
   }
 
   &--trailer--container {
     display: flex;
+    justify-content: center;
+
+    @media only screen and (min-width: 961px) and (max-width: 1200px) {
+      justify-content: start;
+      margin-left: 0.5rem;
+    }
+    @media only screen and (min-width: 1201px) and (max-width: 2560px) {
+      justify-content: start;
+    }
   }
 
   &--trailer--btn {
@@ -74,11 +151,25 @@
     align-items: center;
     justify-content: center;
     background-color: black;
-    padding: 1.5rem 2.5rem;
     color: #f2f2f2;
     font-size: 2rem;
     text-decoration: none;
     font-weight: 700;
+    @media only screen and (min-width: 0px) and (max-width: 375px) {
+      padding: 0.5rem 1.5rem;
+    }
+    @media only screen and (min-width: 376px) and (max-width: 640px) {
+      padding: 0.5rem 1.5rem;
+    }
+    @media only screen and (min-width: 641px) and (max-width: 960px) {
+      padding: 0.5rem 1.5rem;
+    }
+    @media only screen and (min-width: 961px) and (max-width: 1200px) {
+      padding: 1.5rem 2.5rem;
+    }
+    @media only screen and (min-width: 1201px) and (max-width: 2560px) {
+      padding: 1.5rem 2.5rem;
+    }
     cursor: pointer;
     &:hover {
       background-color: brown;

@@ -2,20 +2,37 @@
   background: black;
   width: 100%;
   &--container {
-    padding-top: 3rem;
+    padding-top: 2.5rem;
     display: grid;
     grid-template-columns: auto auto auto;
     margin-right: auto;
     margin-left: auto;
     width: 60%;
-    height: 220px;
+    height: 140px;
     justify-content: space-evenly;
     &--link {
       text-decoration: none;
       color: #fff;
-      font-size: 2.5rem;
       font-weight: 300;
       display: block;
+      @media only screen and (min-width: 0px) and (max-width: 375px) {
+        font-size: 1rem;
+      }
+      @media only screen and (min-width: 376px) and (max-width: 640px) {
+        font-size: 1rem;
+      }
+      @media only screen and (min-width: 641px) and (max-width: 960px) {
+        font-size: 1rem;
+      }
+      @media only screen and (min-width: 961px) and (max-width: 1200px) {
+        font-size: 1rem;
+      }
+      @media only screen and (min-width: 1201px) and (max-width: 1800px) {
+        font-size: 2.5rem;
+      }
+      @media only screen and (min-width: 1801px) and (max-width: 2560px) {
+        font-size: 2.5rem;
+      }
       &:hover {
         color: brown;
         transition: 0.25s;

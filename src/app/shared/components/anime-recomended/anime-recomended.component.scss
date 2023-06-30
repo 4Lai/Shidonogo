@@ -9,21 +9,73 @@
   &--header-container {
     margin: 2.5rem auto;
     overflow: hidden;
-    width: 60%;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     padding-top: 2rem;
     padding-bottom: 1rem;
+    @media only screen and (min-width: 0px) and (max-width: 375px) {
+    }
+    @media only screen and (min-width: 376px) and (max-width: 640px) {
+    }
+    @media only screen and (min-width: 641px) and (max-width: 960px) {
+    }
+    @media only screen and (min-width: 961px) and (max-width: 1200px) {
+    }
+    @media only screen and (min-width: 1201px) and (max-width: 1800px) {
+      width: 60%;
+    }
+    @media only screen and (min-width: 1801px) and (max-width: 2560px) {
+      width: 60%;
+    }
     &--title {
-      font-size: 4rem;
       font-weight: 500;
+      @media only screen and (min-width: 0px) and (max-width: 375px) {
+        margin-left: 0.5rem;
+        font-size: 2.5rem;
+      }
+      @media only screen and (min-width: 376px) and (max-width: 640px) {
+        font-size: 2.5rem;
+        margin-left: 0.5rem;
+      }
+      @media only screen and (min-width: 641px) and (max-width: 960px) {
+        font-size: 2.5rem;
+        margin-left: 0.5rem;
+      }
+      @media only screen and (min-width: 961px) and (max-width: 1200px) {
+        font-size: 2.5rem;
+        margin-left: 0.5rem;
+      }
+      @media only screen and (min-width: 1201px) and (max-width: 1800px) {
+        font-size: 3.5rem;
+      }
+      @media only screen and (min-width: 1801px) and (max-width: 2560px) {
+        font-size: 3.5rem;
+      }
     }
     &--link {
       font-size: 4rem;
       font-weight: 500;
       text-decoration: none;
       color: inherit;
+      @media only screen and (min-width: 0px) and (max-width: 375px) {
+        display: none;
+      }
+      @media only screen and (min-width: 376px) and (max-width: 640px) {
+        display: none;
+      }
+      @media only screen and (min-width: 641px) and (max-width: 960px) {
+        display: none;
+      }
+      @media only screen and (min-width: 961px) and (max-width: 1200px) {
+        display: none;
+      }
+      @media only screen and (min-width: 1201px) and (max-width: 1800px) {
+        font-size: 3.5rem;
+      }
+      @media only screen and (min-width: 1801px) and (max-width: 2560px) {
+        font-size: 3.5rem;
+      }
       &:hover {
         text-decoration: underline;
         color: white;
@@ -32,10 +84,38 @@
     }
   }
   &--content-container {
+    gap: 1rem;
     margin: 2.5rem auto;
-    width: 60%;
     display: flex;
     justify-content: space-between;
+    @media only screen and (min-width: 0px) and (max-width: 375px) {
+      overflow-x: scroll;
+      width: 60%;
+    }
+    @media only screen and (min-width: 376px) and (max-width: 640px) {
+      overflow-x: scroll;
+      background-color: #fff;
+      width: 60%;
+    }
+    @media only screen and (min-width: 641px) and (max-width: 960px) {
+      width: 60%;
+      overflow-x: scroll;
+      background-color: #fff;
+    }
+    @media only screen and (min-width: 961px) and (max-width: 1200px) {
+      overflow-x: scroll;
+      width: 60%;
+      background-color: #fff;
+    }
+    @media only screen and (min-width: 1201px) and (max-width: 1870px) {
+      width: 60%;
+      overflow-x: scroll;
+      background-color: #fff;
+    }
+    @media only screen and (min-width: 1871px) and (max-width: 2560px) {
+      overflow-x: hidden;
+      width: 60%;
+    }
     & img {
       width: 270px;
       height: 210px;

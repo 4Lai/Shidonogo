@@ -1,76 +1,192 @@
 .navigation {
   background-color: black;
-  top: 0;
   position: sticky;
+  top: 0;
+  width: 100%;
   z-index: 9;
   &--top-nav {
-    overflow: hidden;
-    display: flex;
-    justify-content: space-between;
-    width: 60%;
-    margin: auto;
-    &--dropdown {
+    @media only screen and (min-width: 0px) and (max-width: 640px) {
       position: absolute;
+      background-color: inherit;
+      width: 100%;
+    }
+    @media only screen and (min-width: 1201px) and (max-width: 2560px) {
+      overflow: hidden;
       display: flex;
-      flex-direction: column;
-      width: 200px;
-      background-color: rgb(54, 54, 54);
-      & a {
-        font-weight: 300;
-        font-size: 2rem;
-        padding: 1rem 0 1rem 0;
-        color: #f3f3f3;
-        text-decoration: none;
-        width: 200px;
-        text-align: center;
-        &:hover {
-          background-color: green;
-          color: #f2f2f2;
-          transition: 0.25s;
-        }
-      }
+      justify-content: space-between;
+      width: 60%;
+      margin: auto auto;
     }
     &--links {
-      display: flex;
-      align-items: center;
-      &--logo {
-        width: 7rem;
-        cursor: pointer;
-        margin-right: 2rem;
+      @media only screen and (min-width: 641px) and (max-width: 1200px) {
+        display: flex;
+        justify-content: space-evenly;
       }
-      & button {
-        width: 200px;
-        font-family: inherit;
-        border: 0;
-        background-color: inherit;
-        color: #f2f2f2;
-        padding: 2.3rem 2.3rem;
-        font-size: 2rem;
-        font-weight: 500;
-        &:hover {
-          background-color: green;
+      @media only screen and (min-width: 1201px) and (max-width: 2560px) {
+        display: flex;
+        align-items: center;
+      }
+      &--separate {
+        @media only screen and (min-width: 641px) and (max-width: 1200px) {
+          display: flex;
+          gap: 2rem;
+          margin-right: 5rem;
+        }
+        @media only screen and (min-width: 1201px) and (max-width: 2560px) {
+          display: flex;
+          gap: 3rem;
+        }
+      }
+      &--burger {
+        padding: 1.5rem 1rem;
+        display: none;
+        cursor: pointer;
+        @media only screen and (min-width: 0px) and (max-width: 640px) {
+          display: block;
+        }
+      }
+      &--logo {
+        @media only screen and (min-width: 0px) and (max-width: 640px) {
+          display: none;
+        }
+        @media only screen and (min-width: 641px) and (max-width: 1200px) {
+          width: 7rem;
+          cursor: pointer;
+          margin-left: 5rem;
+          margin-top: 0.4rem;
+          margin-right: 0.4rem;
+        }
+        @media only screen and (min-width: 1201px) and (max-width: 2560px) {
+          width: 7rem;
+          cursor: pointer;
+          margin-right: 2rem;
+          margin-top: 0.4rem;
+        }
+      }
+      &--menu {
+        display: flex;
+        align-items: center;
+        @media only screen and (min-width: 0px) and (max-width: 640px) {
+          display: none;
+          &.is-open {
+            display: block;
+            background-color: white;
+            width: 100%;
+          }
+        }
+      }
+      & a {
+        @media only screen and (min-width: 0px) and (max-width: 640px) {
+          font-family: inherit;
+          font-weight: 500;
           color: #f2f2f2;
-          transition: 0.25s;
+          padding: 1.5rem 1rem;
+          display: block;
+          font-size: 1.5rem;
+          border-bottom: 0.1rem solid #cccccc;
+          text-decoration: none;
+          &:active {
+            color: black;
+          }
+          &:visited {
+            text-decoration: none;
+            color: inherit;
+          }
+          &:hover {
+            background-color: green;
+            color: #f2f2f2;
+            transition: 0.25s;
+          }
+          &:last-child:hover {
+            border-bottom: 0.1rem solid green;
+          }
+        }
+        @media only screen and (min-width: 641px) and (max-width: 1200px) {
+          padding: 2.2rem 1.4rem;
+          color: #f2f2f2;
+          font-family: inherit;
+          font-weight: 500;
+          font-size: 2rem;
+          text-decoration: none;
+          &:active {
+            color: white;
+          }
+          &:visited {
+            color: #f2f2f2;
+            text-decoration: none;
+          }
+          &:hover {
+            color: #f2f2f2;
+            background-color: green;
+            transition: 0.25s;
+          }
+        }
+        @media only screen and (min-width: 1201px) and (max-width: 2560px) {
+          padding: 2.2rem 1.4rem;
+          color: #f2f2f2;
+          font-family: inherit;
+          font-weight: 500;
+          font-size: 2rem;
+          text-decoration: none;
+          &:active {
+            color: white;
+          }
+          &:visited {
+            color: #f2f2f2;
+            text-decoration: none;
+          }
+          &:hover {
+            color: #f2f2f2;
+            background-color: green;
+            transition: 0.25s;
+          }
         }
       }
     }
     &--clock {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      text-align: center;
-      &--time {
-        font-size: 2rem;
-        color: white;
-        justify-content: center;
+      @media only screen and (min-width: 0px) and (max-width: 640px) {
+        display: none;
+      }
+      @media only screen and (min-width: 641px) and (max-width: 1200px) {
+        display: none;
+      }
+      @media only screen and (min-width: 1201px) and (max-width: 2560px) {
+        display: flex;
         align-items: center;
-        font-weight: 500;
+        gap: 1rem;
+        text-align: center;
+      }
+      &--time {
+        @media only screen and (min-width: 0px) and (max-width: 640px) {
+          display: none;
+        }
+        @media only screen and (min-width: 641px) and (max-width: 1200px) {
+          display: none;
+        }
+        @media only screen and (min-width: 1201px) and (max-width: 2560px) {
+          font-size: 2rem;
+          color: white;
+          justify-content: center;
+          align-items: center;
+          font-weight: 500;
+        }
       }
       &--icon {
-        width: 24px;
-        height: 24px;
-        color: white;
+        @media only screen and (min-width: 0px) and (max-width: 640px) {
+          display: none;
+        }
+        @media only screen and (min-width: 641px) and (max-width: 1200px) {
+          display: none;
+        }
+        @media only screen and (min-width: 1201px) and (max-width: 2560px) {
+          width: 24px;
+          height: 24px;
+          color: white;
+        }
       }
     }
+  }
+  .material-icons {
+    color: white;
   }
 }

@@ -2,5 +2,8 @@
   margin-bottom: 3rem;
   &__photo {
     width: 100%;
+    @media only screen and (min-width: 0px) and (max-width: 640px) {
+      margin-top: 5.7rem;
+    }
   }
 }
