@@ -1,47 +1,22 @@
 .single-container-parent {
-  @media only screen and (min-width: 0px) and (max-width: 375px) {
-  }
-  @media only screen and (min-width: 376px) and (max-width: 640px) {
-  }
-  @media only screen and (min-width: 641px) and (max-width: 960px) {
-  }
-  @media only screen and (min-width: 961px) and (max-width: 1200px) {
-  }
-  @media only screen and (min-width: 1201px) and (max-width: 1800px) {
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  @media only screen and (min-width: 1801px) and (max-width: 2560px) {
+  @media only screen and (min-width: 1201px) and (max-width: 2560px) {
     width: 60%;
     margin-left: auto;
     margin-right: auto;
   }
   &-check {
     margin-bottom: 2rem;
-    @media only screen and (min-width: 0px) and (max-width: 375px) {
-      font-size: 2.5rem;
-      margin-left: 0.5rem;
-    }
-    @media only screen and (min-width: 376px) and (max-width: 640px) {
-      font-size: 2.5rem;
-      margin-left: 0.5rem;
-    }
-    @media only screen and (min-width: 641px) and (max-width: 960px) {
-      font-size: 2.5rem;
-      margin-left: 0.5rem;
-    }
-    @media only screen and (min-width: 961px) and (max-width: 1200px) {
-      font-size: 2.5rem;
-      margin-left: 0.5rem;
-    }
+    font-size: 2.5rem;
+    margin-left: 0.5rem;
     @media only screen and (min-width: 1201px) and (max-width: 1800px) {
       width: 60%;
       font-size: 3rem;
+      margin-left: 0;
     }
     @media only screen and (min-width: 1801px) and (max-width: 2560px) {
       width: 60%;
       font-size: 3rem;
+      margin-left: 0;
     }
   }
 
@@ -61,12 +36,6 @@
     @media only screen and (min-width: 641px) and (max-width: 960px) {
       grid-template-columns: auto auto;
     }
-    @media only screen and (min-width: 961px) and (max-width: 1200px) {
-    }
-    @media only screen and (min-width: 1201px) and (max-width: 1800px) {
-    }
-    @media only screen and (min-width: 1801px) and (max-width: 2560px) {
-    }
     &-sort {
       margin-top: 2rem;
       display: flex;
@@ -77,19 +46,7 @@
         display: flex;
       }
       &-text {
-        font-size: 1.8rem;
-        @media only screen and (min-width: 0px) and (max-width: 375px) {
-          font-size: 1.5rem;
-        }
-        @media only screen and (min-width: 376px) and (max-width: 640px) {
-          font-size: 1.5rem;
-        }
-        @media only screen and (min-width: 641px) and (max-width: 960px) {
-          font-size: 1.5rem;
-        }
-        @media only screen and (min-width: 961px) and (max-width: 1200px) {
-          font-size: 1.5rem;
-        }
+        font-size: 1.5rem;
         @media only screen and (min-width: 1201px) and (max-width: 1800px) {
           font-size: 1.8rem;
         }
@@ -127,7 +84,6 @@
   border-bottom-left-radius: 40px 40px;
 
   &-img {
-    // margin-top: 1rem;
     padding: 1rem;
     max-width: 200px;
     max-height: 250px;
@@ -181,16 +137,4 @@ h1 {
   margin-bottom: 4rem;
   font-size: 4.8rem;
   font-family: inherit;
-  @media only screen and (min-width: 0px) and (max-width: 375px) {
-  }
-  @media only screen and (min-width: 376px) and (max-width: 640px) {
-  }
-  @media only screen and (min-width: 641px) and (max-width: 960px) {
-  }
-  @media only screen and (min-width: 961px) and (max-width: 1200px) {
-  }
-  @media only screen and (min-width: 1201px) and (max-width: 1800px) {
-  }
-  @media only screen and (min-width: 1801px) and (max-width: 2560px) {
-  }
 }

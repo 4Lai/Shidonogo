@@ -3,12 +3,10 @@
   color: black;
   padding: 0.1rem 0.5rem 0.1rem 0.5rem;
   font-weight: 300;
+  font-size: 1.5rem;
   &:hover {
     color: rgba(255, 0, 0, 0.37);
     transition: 0.25s;
-  }
-  @media only screen and (min-width: 0px) and (max-width: 640px) {
-    font-size: 1.5rem;
   }
   @media only screen and (min-width: 641px) and (max-width: 1200px) {
     font-size: 2rem;
@@ -26,12 +24,10 @@
   font-weight: 600;
   padding: 0.1rem 1rem 0.1rem 1rem;
   font-weight: 500;
+  font-size: 1.5rem;
   &:hover {
     background-color: rgb(255, 210, 0);
     transition: 0.25s;
-  }
-  @media only screen and (min-width: 0px) and (max-width: 640px) {
-    font-size: 1.5rem;
   }
   @media only screen and (min-width: 641px) and (max-width: 1200px) {
     font-size: 2rem;

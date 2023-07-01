@@ -26,9 +26,7 @@
     font-weight: 700;
     line-height: 1.1;
     margin-bottom: 2rem;
-    @media only screen and (min-width: 0px) and (max-width: 375px) {
-      font-size: 5rem;
-    }
+    font-size: 5rem;
     @media only screen and (min-width: 376px) and (max-width: 640px) {
       font-size: 6rem;
     }
@@ -51,9 +49,7 @@
     letter-spacing: 0.2rem;
     line-height: 1.1;
     margin-bottom: 3rem;
-    @media only screen and (min-width: 0px) and (max-width: 375px) {
-      font-size: 2rem;
-    }
+    font-size: 2rem;
     @media only screen and (min-width: 376px) and (max-width: 640px) {
       font-size: 3rem;
     }
@@ -84,9 +80,7 @@
     text-decoration: none;
     font-weight: 300;
     color: black;
-    @media only screen and (min-width: 0px) and (max-width: 375px) {
-      font-size: 1.5rem;
-    }
+    font-size: 1.5rem;
     @media only screen and (min-width: 376px) and (max-width: 640px) {
       font-size: 2rem;
     }
@@ -114,9 +108,7 @@
 
   &--toggle-text {
     font-weight: 300;
-    @media only screen and (min-width: 0px) and (max-width: 375px) {
-      font-size: 1.5rem;
-    }
+    font-size: 1.5rem;
     @media only screen and (min-width: 376px) and (max-width: 640px) {
       font-size: 2rem;
     }
@@ -155,15 +147,7 @@
     font-size: 2rem;
     text-decoration: none;
     font-weight: 700;
-    @media only screen and (min-width: 0px) and (max-width: 375px) {
-      padding: 0.5rem 1.5rem;
-    }
-    @media only screen and (min-width: 376px) and (max-width: 640px) {
-      padding: 0.5rem 1.5rem;
-    }
-    @media only screen and (min-width: 641px) and (max-width: 960px) {
-      padding: 0.5rem 1.5rem;
-    }
+    padding: 0.5rem 1.5rem;
     @media only screen and (min-width: 961px) and (max-width: 1200px) {
       padding: 1.5rem 2.5rem;
     }

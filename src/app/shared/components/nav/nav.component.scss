@@ -43,6 +43,7 @@
         cursor: pointer;
         @media only screen and (min-width: 0px) and (max-width: 640px) {
           display: block;
+          width: fit-content;
         }
       }
       &--logo {
@@ -144,12 +145,7 @@
       }
     }
     &--clock {
-      @media only screen and (min-width: 0px) and (max-width: 640px) {
-        display: none;
-      }
-      @media only screen and (min-width: 641px) and (max-width: 1200px) {
-        display: none;
-      }
+      display: none;
       @media only screen and (min-width: 1201px) and (max-width: 2560px) {
         display: flex;
         align-items: center;
@@ -157,31 +153,23 @@
         text-align: center;
       }
       &--time {
-        @media only screen and (min-width: 0px) and (max-width: 640px) {
-          display: none;
-        }
-        @media only screen and (min-width: 641px) and (max-width: 1200px) {
-          display: none;
-        }
+        display: none;
         @media only screen and (min-width: 1201px) and (max-width: 2560px) {
           font-size: 2rem;
           color: white;
           justify-content: center;
           align-items: center;
           font-weight: 500;
+          display: block;
         }
       }
       &--icon {
-        @media only screen and (min-width: 0px) and (max-width: 640px) {
-          display: none;
-        }
-        @media only screen and (min-width: 641px) and (max-width: 1200px) {
-          display: none;
-        }
+        display: none;
         @media only screen and (min-width: 1201px) and (max-width: 2560px) {
           width: 24px;
           height: 24px;
           color: white;
+          display: block;
         }
       }
     }
