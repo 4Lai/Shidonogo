@@ -67,14 +67,14 @@
     overflow-x: scroll;
     justify-content: space-between;
   }
-  @media only screen and (min-width: 1201px) and (max-width: 1700px) {
+  @media only screen and (min-width: 1201px) and (max-width: 1735px) {
     overflow-x: scroll;
     width: 60%;
     justify-content: space-between;
   }
-  @media only screen and (min-width: 1701px) and (max-width: 2560px) {
+  @media only screen and (min-width: 1735px) and (max-width: 2560px) {
     justify-content: space-between;
-    overflow-x: scroll;
+    overflow-x: hidden;
     width: 60%;
   }
   &--el-container {
