@@ -4,6 +4,7 @@ import {
   RandomQuotesService,
 } from '../../services/random-quotes.service';
 import { take } from 'rxjs';
+import { RandomQuotesDataService } from '../../services/random-quotes-data.service';
 
 @Component({
   selector: 'app-random-quotes',
@@ -12,16 +13,12 @@ import { take } from 'rxjs';
 })
 export class RandomQuotesComponent {
   @ViewChild('action') h5: any;
+  dataService = this.dataHtml;
 
-  randomQuotesData: { title: string; action: string; img: string }[] = [
-    {
-      title: 'Random quotes from anime!',
-      action: 'Click to draw',
-      img: '/assets/img/imgggg/cube.png',
-    },
-  ];
-
-  constructor(private randomQuotesService: RandomQuotesService) {}
+  constructor(
+    private randomQuotesService: RandomQuotesService,
+    private dataHtml: RandomQuotesDataService
+  ) {}
 
   myData: RandomQuoteInterface;
 

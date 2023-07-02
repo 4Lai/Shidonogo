@@ -1,45 +1,12 @@
 import { Component } from '@angular/core';
+import { FooterDataService } from '../../services/footer-data.service';
 
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.scss']
+  styleUrls: ['./footer.component.scss'],
 })
 export class FooterComponent {
-
-  footerDataLink: {text:string; url:string;}[] = [
-    {
-      text: 'About us',
-      url: '##'
-    },
-    {
-      text: 'Contact us',
-      url: '##'
-    },
-    {
-      text: 'FAQ',
-      url: '##'
-    },
-    {
-      text:'Copyrights',
-      url: '##',
-    },
-    {
-      text: 'Privacy Policy',
-      url: '##'
-    },
-    {
-      text: 'Terms of Use',
-      url: '##'
-    },
-    {
-      text: 'Twitter',
-      url: '##'
-    },
-    {
-      text: 'Facebook',
-      url: '##'
-    }
-  ]
-
+  dataService = this.data;
+  constructor(private data: FooterDataService) {}
 }

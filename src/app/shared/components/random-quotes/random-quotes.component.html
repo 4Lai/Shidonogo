@@ -1,8 +1,18 @@
 <div class="random-quotes">
   <div class="random-quotes--header-container">
-    <h4 class="random-quotes--header-container--title">{{randomQuotesData[0].title}}</h4>
-    <h5 #action class="random-quotes--header-container--action">{{randomQuotesData[0].action}}</h5>
-    <img class="random-quotes--header-container--img" (click)="scroll(target)" (click)="randomQuotes()" src="{{randomQuotesData[0].img}}" alt="" />
+    <h4 class="random-quotes--header-container--title">
+      {{ this.dataService.randomQuotesData[0].title }}
+    </h4>
+    <h5 #action class="random-quotes--header-container--action">
+      {{ this.dataService.randomQuotesData[0].action }}
+    </h5>
+    <img
+      class="random-quotes--header-container--img"
+      (click)="scroll(target)"
+      (click)="randomQuotes()"
+      src="{{ this.dataService.randomQuotesData[0].img }}"
+      alt=""
+    />
   </div>
   <div class="random-quotes--content" #target>
     <app-random-quotes-content [myData]="myData"></app-random-quotes-content>

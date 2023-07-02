@@ -1,7 +1,8 @@
 <div class="footer">
   <div class="footer--container">
-    <app-link-footer *ngFor="let el of footerDataLink" [Hero]="el"></app-link-footer>
+    <app-link-footer
+      *ngFor="let el of this.dataService.footerDataLink"
+      [Hero]="el"
+    ></app-link-footer>
   </div>
 </div>
-
-

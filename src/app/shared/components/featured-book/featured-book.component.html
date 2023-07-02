@@ -1,17 +1,27 @@
 <div class="featured-book">
-  <h3 class="featured-book--title">{{ featuredBookData[0].h3 }}</h3>
+  <h3 class="featured-book--title">
+    {{ this.dataService.featuredBookData[0].h3 }}
+  </h3>
   <div class="section-two-space-elements featured-book--space-elements">
     <a href="">
       <div class="featured-book--img-container">
-        <img src="{{ featuredBookData[0].imgUrl }}" loading="lazy" alt="" />
+        <img
+          src="{{ this.dataService.featuredBookData[0].imgUrl }}"
+          loading="lazy"
+          alt=""
+        />
       </div>
     </a>
     <div>
-      <h4 class="featured-book--title">{{ featuredBookData[0].h4 }}</h4>
+      <h4 class="featured-book--title">
+        {{ this.dataService.featuredBookData[0].h4 }}
+      </h4>
       <p class="featured-book--text">
-        {{ featuredBookData[0].p }}
+        {{ this.dataService.featuredBookData[0].p }}
       </p>
-      <a href="" class="featured-book--order">{{ featuredBookData[0].btn }}</a>
+      <a href="" class="featured-book--order">{{
+        this.dataService.featuredBookData[0].btn
+      }}</a>
     </div>
   </div>
 </div>
