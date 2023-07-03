@@ -21,6 +21,8 @@ import { RandomQuotesContentComponent } from './shared/components/random-quotes-
 import { LinkFooterComponent } from './shared/components/link-footer/link-footer.component';
 import { NavComponent } from './shared/components/nav/nav.component';
 import { SingleRecommendedComponent } from './shared/components/single-recommended/single-recommended.component';
+import { FeaturedBookRecommendedComponent } from './shared/components/featured-book-recommended/featured-book-recommended.component';
+import { MangaListComponent } from './pages/manga-list/manga-list.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,8 @@ import { SingleRecommendedComponent } from './shared/components/single-recommend
     LinkFooterComponent,
     NavComponent,
     SingleRecommendedComponent,
+    FeaturedBookRecommendedComponent,
+    MangaListComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

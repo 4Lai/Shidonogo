@@ -3,6 +3,10 @@
   margin-bottom: 0.7rem;
   align-items: center;
   margin-left: 1rem;
+  @media only screen and (min-width: 0px) and (max-width: 1200px) {
+    margin-left: 1.6rem;
+    margin-right: 1.6rem;
+  }
   @media only screen and (min-width: 1201px) and (max-width: 2560px) {
     margin-left: 0;
     width: 60%;
@@ -11,6 +15,7 @@
     margin-left: auto;
     margin-right: auto;
   }
+
   &--container {
     margin-left: auto;
     margin-right: auto;
@@ -21,7 +26,8 @@
 
   &--heading {
     letter-spacing: -0.25rem;
-    margin-left: 0.6rem;
+    margin-left: 1.6rem;
+    margin-right: 1.6rem;
     margin-right: 0.6rem;
     font-weight: 700;
     margin-bottom: 2rem;
@@ -43,9 +49,10 @@
 
   &--subheading {
     overflow: visible;
-    margin: 0 0.8rem;
+    // margin: 0 0.8rem;
+    margin-left: 1.6rem;
+    margin-right: 1.6rem;
     font-weight: 500;
-
     line-height: 1.1;
     margin-bottom: 3rem;
     font-size: 2rem;
@@ -67,7 +74,9 @@
 
   &--read--container {
     margin-bottom: 3.5rem;
-    margin-left: 0.7rem;
+    // margin-left: 0.7rem;
+    margin-left: 1.6rem;
+    margin-right: 1.6rem;
     @media only screen and (min-width: 1201px) and (max-width: 2560px) {
       margin-left: 0;
     }

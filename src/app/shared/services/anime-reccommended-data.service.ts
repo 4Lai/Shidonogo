@@ -8,7 +8,7 @@ export class AnimeReccommendedDataService {
 
   animeReccomendedHeaderData: AnimeRecommendedHeaderInterface[] = [
     {
-      h: 'If you like Kimetsu no Yaiba, we reccomend:',
+      h: 'If you like Kimetsu no Yaiba, we recommend:',
       btn: 'See all >',
       urlButton: '#see',
     },

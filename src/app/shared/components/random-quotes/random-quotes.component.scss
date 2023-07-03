@@ -1,5 +1,9 @@
 .random-quotes {
   margin: 2.5rem auto;
+  @media only screen and (min-width: 0px) and (max-width: 1200px) {
+    margin-left: 1.6rem;
+    margin-right: 1.6rem;
+  }
   &--header-container {
     margin: 2.5rem auto;
     margin-top: 0;
