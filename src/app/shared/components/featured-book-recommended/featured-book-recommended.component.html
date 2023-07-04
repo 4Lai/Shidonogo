@@ -84,7 +84,10 @@
         <p class="featured-book-recommended-container-content-read-title">
           {{ el.attributes.canonicalTitle }}
         </p>
-        <p class="featured-book-recommended-container-content-read-description">
+        <p
+          maxlength="50"
+          class="featured-book-recommended-container-content-read-description"
+        >
           {{ el.attributes.description }}
         </p>
       </div>
