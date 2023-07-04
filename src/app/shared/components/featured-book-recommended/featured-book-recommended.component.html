@@ -71,7 +71,9 @@
       </p>
     </div>
     <div class="featured-book-recommended-container-content-read">
-      <div>
+      <div
+        class="featured-book-recommended-container-content-read-img-container"
+      >
         <img
           class="featured-book-recommended-container-content-read-img"
           src="{{ el.attributes.posterImage.small }}"
@@ -80,7 +82,7 @@
       </div>
       <div class="featured-book-recommended-container-content-read-siblings">
         <p class="featured-book-recommended-container-content-read-title">
-          {{ el.attributes.titles.en_jp }}
+          {{ el.attributes.canonicalTitle }}
         </p>
         <p class="featured-book-recommended-container-content-read-description">
           {{ el.attributes.description }}

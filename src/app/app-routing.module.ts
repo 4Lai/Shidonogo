@@ -13,7 +13,6 @@ const routes: Routes = [
   { path: 'anime-list', component: AnimeListComponent },
   { path: 'anime-list/:genre', component: SingleRecommendedComponent },
   { path: 'manga-list', component: MangaListComponent },
-  { path: 'manga-list/:genre', component: FeaturedBookRecommendedComponent },
   { path: '**', component: NotFoundComponent },
 ];
 

@@ -28,6 +28,7 @@ export interface FeaturedBookRecommendedInterface {
       type: string;
       attributes: {
         averageRating: string;
+        cannonicalTitle: string;
         chapterCount: number;
         description: string;
         mangaType: string;

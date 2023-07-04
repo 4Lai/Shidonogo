@@ -21,8 +21,7 @@ export class FeaturedBookRecommendedComponent implements OnInit {
 
   sortOnClick() {
     this.swtichSort = !this.swtichSort;
-    this.data.set(
-      sortByInt(this.data, 'data.attributes.averageRating', this.swtichSort)
-    );
+    console.log(this.data);
+    sortByInt(this.data, '', this.swtichSort);
   }
 }
