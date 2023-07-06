@@ -70,27 +70,29 @@
         {{ el.attributes.averageRating }}
       </p>
     </div>
-    <div class="featured-book-recommended-container-content-read">
-      <div
-        class="featured-book-recommended-container-content-read-img-container"
-      >
-        <img
-          class="featured-book-recommended-container-content-read-img"
-          src="{{ el.attributes.posterImage.small }}"
-          alt=""
-        />
-      </div>
-      <div class="featured-book-recommended-container-content-read-siblings">
-        <p class="featured-book-recommended-container-content-read-title">
-          {{ el.attributes.canonicalTitle }}
-        </p>
-        <p
-          maxlength="50"
-          class="featured-book-recommended-container-content-read-description"
+    <a routerLink="/manga-list/{{ el.id }}">
+      <div class="featured-book-recommended-container-content-read">
+        <div
+          class="featured-book-recommended-container-content-read-img-container"
         >
-          {{ el.attributes.description }}
-        </p>
+          <img
+            class="featured-book-recommended-container-content-read-img"
+            src="{{ el.attributes.posterImage.small }}"
+            alt=""
+          />
+        </div>
+        <div class="featured-book-recommended-container-content-read-siblings">
+          <p class="featured-book-recommended-container-content-read-title">
+            {{ el.attributes.canonicalTitle }}
+          </p>
+          <p
+            maxlength="50"
+            class="featured-book-recommended-container-content-read-description"
+          >
+            {{ el.attributes.description }}
+          </p>
+        </div>
       </div>
-    </div>
+    </a>
   </div>
 </div>

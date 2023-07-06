@@ -9,38 +9,48 @@ export class FeaturedBookRecommendedService {
   constructor(private http: HttpClient) {}
 
   getData() {
-    const mangaData = this.http
-      .get<FeaturedBookRecommendedInterface>(
-        'https://kitsu.io/api/edge/trending/manga'
-      )
-      .pipe(
-        map((val) => {
-          return val.data;
-        })
-      );
-    return mangaData;
+    return this.http.get<FeaturedBookListInterface>(
+      'https://kitsu.io/api/edge/trending/manga'
+    );
+  }
+
+  getDataById(id: number) {
+    return this.http.get<FeaturedBookSingleInterface>(
+      `https://kitsu.io/api/edge/manga/${id}`
+    );
   }
 }
-export interface FeaturedBookRecommendedInterface {
-  data: [
-    {
-      id: string;
-      type: string;
-      attributes: {
-        averageRating: string;
-        cannonicalTitle: string;
-        chapterCount: number;
-        description: string;
-        mangaType: string;
-        posterImage: {
-          large: string;
-          medium: string;
-          original: string;
-          small: string;
-          tiny: string;
-        };
-        titles: { en_jp: string; en_us: string };
-      };
-    }
-  ];
+export interface FeaturedBookListInterface {
+  data: FeaturedBookInterface[];
+}
+
+export interface FeaturedBookSingleInterface {
+  data: FeaturedBookInterface;
+}
+
+export interface FeaturedBookInterface {
+  id: string;
+  type: string;
+  attributes: {
+    averageRating: string;
+    canonicalTitle: string;
+    coverImage: {
+      large: string;
+      original: string;
+      small: string;
+      tiny: string;
+    };
+    chapterCount: number;
+    description: string;
+    mangaType: string;
+    posterImage: {
+      large: string;
+      medium: string;
+      original: string;
+      small: string;
+      tiny: string;
+    };
+    synopsis: string;
+    titles: { en_jp: string; en_us: string };
+  };
 }

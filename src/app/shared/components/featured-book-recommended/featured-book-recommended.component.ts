@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FeaturedBookRecommendedService } from '../../services/featured-book-recommended.service';
-import { sortByInt } from '../../helpers/sort-by';
+import { sortByInte } from '../../helpers/sort-by';
+import { map } from 'rxjs';
 
 @Component({
   selector: 'app-featured-book-recommended',
@@ -14,14 +15,16 @@ export class FeaturedBookRecommendedComponent implements OnInit {
   constructor(private service: FeaturedBookRecommendedService) {}
 
   ngOnInit() {
-    this.service.getData().subscribe((val) => {
-      this.data = val;
-    });
+    this.service
+      .getData()
+      .pipe(map((val) => val.data))
+      .subscribe((val) => {
+        this.data = val;
+      });
   }
 
   sortOnClick() {
     this.swtichSort = !this.swtichSort;
-    console.log(this.data);
-    sortByInt(this.data, '', this.swtichSort);
+    sortByInte(this.data, 'attributes', 'averageRating', this.swtichSort);
   }
 }

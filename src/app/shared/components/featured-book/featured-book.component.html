@@ -1,12 +1,10 @@
 <div class="featured-book">
-  <h3 class="featured-book--title">
-    {{ this.dataService.featuredBookData[0].h3 }}
-  </h3>
+  <h3 class="featured-book--title">Read {{ featuredBook.type }}</h3>
   <div class="section-two-space-elements featured-book--space-elements">
-    <a href="">
+    <a routerLink="/manga-list/{{ featuredBook.id }}">
       <div class="featured-book--img-container">
         <img
-          src="{{ this.dataService.featuredBookData[0].imgUrl }}"
+          src="{{ featuredBook.attributes.posterImage.small }}"
           loading="lazy"
           alt=""
         />
@@ -14,14 +12,28 @@
     </a>
     <div>
       <h4 class="featured-book--title">
-        {{ this.dataService.featuredBookData[0].h4 }}
+        {{ featuredBook.attributes.canonicalTitle }}
       </h4>
+
       <p class="featured-book--text">
-        {{ this.dataService.featuredBookData[0].p }}
+        {{
+          expanded
+            ? featuredBook.attributes.description
+            : (featuredBook.attributes.description | textShortener : 600)
+        }}
       </p>
-      <a href="" class="featured-book--order">{{
-        this.dataService.featuredBookData[0].btn
-      }}</a>
+
+      <button
+        *ngIf="featuredBook.attributes.description.length > 600"
+        (click)="expandDesc()"
+      >
+        Read more
+      </button>
+      <a
+        routerLink="/manga-list/{{ featuredBook.id }}"
+        class="featured-book--order"
+        >Order now</a
+      >
     </div>
   </div>
 </div>

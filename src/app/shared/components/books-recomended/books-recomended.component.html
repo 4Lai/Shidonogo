@@ -1,21 +1,22 @@
 <div class="books-recomended-header">
-  <h4 class="books-recomended-header--title">
-    {{ this.dataService.booksRecomendedDataTitle[0].h }}
-  </h4>
-  <a routerLink="/manga-list" class="books-recomended-header--link">{{
-    this.dataService.booksRecomendedDataTitle[0].linkText
-  }}</a>
+  <h4 class="books-recomended-header--title">Other trending manga</h4>
+  <a routerLink="/manga-list" class="books-recomended-header--link">
+    See more >
+  </a>
 </div>
 
 <div class="books-recomended-container">
   <div
-    *ngFor="let el of this.dataService.booksRecomendedData"
+    *ngFor="let el of this.dataService"
     class="books-recomended-container--el-container"
   >
-    <a href="" class="books-recomended-container--img-hover">
+    <a
+      routerLink="/manga-list/{{ el.id }}"
+      class="books-recomended-container--img-hover"
+    >
       <div class="books-recomended-container--img-container">
         <img
-          src="{{ el.img }}"
+          src="{{ el.attributes.posterImage.small }}"
           loading="lazy"
           class="books-recomended-container--img"
           alt=""
@@ -23,10 +24,14 @@
       </div>
     </a>
     <div class="books-recomended-text-container">
-      <p class="books-recomended-text-container--type">{{ el.name }}</p>
+      <p class="books-recomended-text-container--type">
+        {{ el.type | titlecase }}
+      </p>
       <p class="books-recomended-text-container--p">
-        <a href="" class="books-recomended-text-container--title"
-          >{{ el.title }}
+        <a
+          routerLink="/manga-list/{{ el.id }}"
+          class="books-recomended-text-container--title"
+          >{{ el.attributes.canonicalTitle }}
         </a>
       </p>
     </div>

@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { FeaturedBookDataService } from '../../services/featured-book-data.service';
+import { Component, Input } from '@angular/core';
+import { FeaturedBookInterface } from '../../services/featured-book-recommended.service';
 
 @Component({
   selector: 'app-featured-book',
@@ -7,6 +7,10 @@ import { FeaturedBookDataService } from '../../services/featured-book-data.servi
   styleUrls: ['./featured-book.component.scss'],
 })
 export class FeaturedBookComponent {
-  dataService = this.data;
-  constructor(private data: FeaturedBookDataService) {}
+  expanded: boolean = false;
+  @Input({ required: true }) featuredBook: FeaturedBookInterface;
+
+  expandDesc() {
+    this.expanded = !this.expanded;
+  }
 }

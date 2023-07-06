@@ -23,6 +23,8 @@ import { NavComponent } from './shared/components/nav/nav.component';
 import { SingleRecommendedComponent } from './shared/components/single-recommended/single-recommended.component';
 import { FeaturedBookRecommendedComponent } from './shared/components/featured-book-recommended/featured-book-recommended.component';
 import { MangaListComponent } from './pages/manga-list/manga-list.component';
+import { MangaDetailsComponent } from './shared/components/manga-details/manga-details.component';
+import { TextShortenerPipe } from './shared/pipes/text-shortener.pipe';
 
 @NgModule({
   declarations: [
@@ -47,6 +49,8 @@ import { MangaListComponent } from './pages/manga-list/manga-list.component';
     SingleRecommendedComponent,
     FeaturedBookRecommendedComponent,
     MangaListComponent,
+    MangaDetailsComponent,
+    TextShortenerPipe,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
