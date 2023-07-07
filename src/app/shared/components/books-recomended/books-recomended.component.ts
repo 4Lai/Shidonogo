@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FeaturedBookRecommendedService } from '../../services/featured-book-recommended.service';
 import { Router } from '@angular/router';
 
@@ -19,7 +19,7 @@ export class BooksRecomendedComponent implements OnInit {
       this.dataService = val.data.slice(0, 4);
     });
   }
-  navigate() {
-    this.route.navigate(['manga-list/id']);
+  navigate(id: number) {
+    this.route.navigate([`manga-list/${id}`]);
   }
 }

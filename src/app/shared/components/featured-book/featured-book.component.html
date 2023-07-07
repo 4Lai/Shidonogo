@@ -1,5 +1,7 @@
 <div class="featured-book">
-  <h3 class="featured-book--title">Read {{ featuredBook.type }}</h3>
+  <h3 *ngIf="this.curRoute === '/home'" class="featured-book--title">
+    Read {{ featuredBook.type }}
+  </h3>
   <div class="section-two-space-elements featured-book--space-elements">
     <a routerLink="/manga-list/{{ featuredBook.id }}">
       <div class="featured-book--img-container">
@@ -22,13 +24,14 @@
             : (featuredBook.attributes.description | textShortener : 600)
         }}
       </p>
-
-      <button
-        *ngIf="featuredBook.attributes.description.length > 600"
-        (click)="expandDesc()"
-      >
-        Read more
-      </button>
+      <div *ngIf="this.curRoute !== '/home'">
+        <button
+          *ngIf="featuredBook.attributes.description.length > 600"
+          (click)="expandDesc()"
+        >
+          Read more
+        </button>
+      </div>
       <a
         routerLink="/manga-list/{{ featuredBook.id }}"
         class="featured-book--order"

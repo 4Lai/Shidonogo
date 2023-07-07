@@ -11,7 +11,7 @@
     class="books-recomended-container--el-container"
   >
     <a
-      routerLink="/manga-list/{{ el.id }}"
+      href="/manga-list/{{ el.id }}"
       class="books-recomended-container--img-hover"
     >
       <div class="books-recomended-container--img-container">
@@ -29,7 +29,7 @@
       </p>
       <p class="books-recomended-text-container--p">
         <a
-          routerLink="/manga-list/{{ el.id }}"
+          href="/manga-list/{{ el.id }}"
           class="books-recomended-text-container--title"
           >{{ el.attributes.canonicalTitle }}
         </a>
