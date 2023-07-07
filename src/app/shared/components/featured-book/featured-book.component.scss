@@ -91,4 +91,24 @@
       transition: 0.25s;
     }
   }
+  &--expand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &-btn {
+      font-size: 2rem;
+      font-family: inherit;
+      border: none;
+      padding: 0.5rem 1rem;
+      background-color: #000;
+      margin-bottom: 2rem;
+      text-align: center;
+      color: #fff;
+      &:hover {
+        transition: 0.25s;
+        cursor: pointer;
+        background-color: brown;
+      }
+    }
+  }
 }

@@ -24,8 +24,9 @@
             : (featuredBook.attributes.description | textShortener : 600)
         }}
       </p>
-      <div *ngIf="this.curRoute !== '/home'">
+      <div class="featured-book--expand" *ngIf="this.curRoute !== '/home'">
         <button
+          class="featured-book--expand-btn"
           *ngIf="featuredBook.attributes.description.length > 600"
           (click)="expandDesc()"
         >

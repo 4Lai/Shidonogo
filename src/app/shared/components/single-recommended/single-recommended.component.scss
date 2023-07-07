@@ -1,6 +1,28 @@
 .single-container-parent {
   margin-left: 1.6rem;
   margin-right: 1.6rem;
+  &--back {
+    margin-bottom: 2rem;
+    &-link {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      gap: 1rem;
+      color: inherit;
+      width: fit-content;
+      &:hover {
+        transition: 0.5s;
+        color: brown;
+      }
+    }
+    &-text {
+      font-size: 2rem;
+    }
+    &-icon {
+      width: 40px;
+      height: 40px;
+    }
+  }
   @media only screen and (min-width: 1201px) and (max-width: 2560px) {
     width: 60%;
     margin-left: auto;

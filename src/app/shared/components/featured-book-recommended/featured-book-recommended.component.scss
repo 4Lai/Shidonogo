@@ -22,6 +22,25 @@ a:hover {
     width: 60%;
     margin: auto auto;
   }
+  &--back {
+    margin-bottom: 2rem;
+    &-link {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      &:hover {
+        transition: 0.5s;
+        color: brown;
+      }
+    }
+    &-icon {
+      width: 40px;
+      height: 40px;
+    }
+    &-text {
+      font-size: 2rem;
+    }
+  }
   &--header {
     border-top-left-radius: 40px 40px;
     border-bottom-right-radius: 40px 40px;

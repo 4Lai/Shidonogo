@@ -1,6 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { FeaturedBookRecommendedService } from '../../services/featured-book-recommended.service';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-books-recomended',
@@ -8,17 +7,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./books-recomended.component.scss'],
 })
 export class BooksRecomendedComponent implements OnInit {
-  dataService: any[] = [];
-  constructor(
-    private data: FeaturedBookRecommendedService,
-    private route: Router
-  ) {}
+  dataService: any = this.activateRoute.snapshot.data['data'].slice(0, 4);
 
-  ngOnInit() {
-    this.data.getData().subscribe((val) => {
-      this.dataService = val.data.slice(0, 4);
-    });
-  }
+  constructor(private route: Router, private activateRoute: ActivatedRoute) {}
+
+  ngOnInit() {}
+
   navigate(id: number) {
     this.route.navigate([`manga-list/${id}`]);
   }
