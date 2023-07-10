@@ -4,30 +4,30 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root',
 })
-export class FeaturedBookRecommendedService {
+export class AnimeRecommendedService {
   constructor(private http: HttpClient) {}
 
-  getData() {
-    return this.http.get<FeaturedBookListInterface>(
-      'https://kitsu.io/api/edge/trending/manga'
+  getAnimeListRecommendation() {
+    return this.http.get<animeRecommendedListInterface>(
+      'https://kitsu.io/api/edge/trending/anime'
     );
   }
-
-  getDataById(id: number) {
-    return this.http.get<FeaturedBookSingleInterface>(
-      `https://kitsu.io/api/edge/manga/${id}`
+  getAnimeById(id: number) {
+    return this.http.get<animeRecommendedSingleInterface>(
+      `https://kitsu.io/api/edge/anime/${id}`
     );
   }
 }
-export interface FeaturedBookListInterface {
-  data: FeaturedBookInterface[];
+
+export interface animeRecommendedListInterface {
+  data: animeRecommendedInterface[];
 }
 
-export interface FeaturedBookSingleInterface {
-  data: FeaturedBookInterface;
+export interface animeRecommendedSingleInterface {
+  data: animeRecommendedInterface;
 }
 
-export interface FeaturedBookInterface {
+export interface animeRecommendedInterface {
   id: string;
   type: string;
   attributes: {
@@ -39,7 +39,6 @@ export interface FeaturedBookInterface {
       small: string;
       tiny: string;
     };
-    chapterCount: number;
     description: string;
     mangaType: string;
     posterImage: {

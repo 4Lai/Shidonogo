@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class FeaturedBookComponent implements OnInit {
   expanded: boolean = false;
   curRoute: string = '';
-  @Input({ required: true }) featuredBook: FeaturedBookInterface;
+  @Input({ required: true }) featuredBook: any;
 
   constructor(private route: Router) {}
 

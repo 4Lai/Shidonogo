@@ -16,8 +16,6 @@ export class AnimeSingleComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     console.log(this.activatedRoute);
-    this.animeService.getAnime(this.slug).subscribe((val) => {
-      console.log(val);
-    });
+    this.animeService.getAnime(this.slug).subscribe((val) => {});
   }
 }

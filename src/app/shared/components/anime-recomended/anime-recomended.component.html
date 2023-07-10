@@ -1,24 +1,24 @@
 <div class="anime-recommended-container">
   <div class="anime-recommended-container--header-container">
     <h4 class="anime-recommended-container--header-container--title">
-      {{ this.data.animeReccomendedHeaderData[0].h }}
+      Trending anime
     </h4>
     <a
-      href="{{ this.data.animeReccomendedHeaderData[0].urlButton }}"
+      routerLink="/trending-anime"
       class="anime-recommended-container--header-container--link"
-      >{{ this.data.animeReccomendedHeaderData[0].btn }}</a
+      >See more ></a
     >
   </div>
   <div class="anime-recommended-container--content-container">
-    <div *ngFor="let el of this.data.animeReccomendedContainerData">
+    <div *ngFor="let el of this.animeRecList">
       <a
-        href="{{ el.url }}"
+        href="/trending-anime/{{ el.id }}"
         class="anime-recommended-container--content-container--link"
       >
-        <img src="{{ el.img }}" alt="" />
+        <img src="{{ el.attributes.posterImage.original }}" alt="" />
         <div class="anime-recommended-container--content-container--text">
           <p class="anime-recommended-container--content-container--title">
-            {{ el.title }}
+            {{ el.attributes.canonicalTitle }}
           </p>
         </div>
       </a>

@@ -25,6 +25,11 @@ import { FeaturedBookRecommendedComponent } from './shared/components/featured-b
 import { MangaListComponent } from './pages/manga-list/manga-list.component';
 import { MangaDetailsComponent } from './shared/components/manga-details/manga-details.component';
 import { TextShortenerPipe } from './shared/pipes/text-shortener.pipe';
+import { TrendingAnimeListComponent } from './shared/components/trending-anime-list/trending-anime-list.component';
+import { TrendingAnimeComponent } from './pages/trending-anime/trending-anime.component';
+import { BackToHomeComponent } from './shared/components/back-to-home/back-to-home.component';
+import { TrendingListReusableComponent } from './shared/components/trending-list-reusable/trending-list-reusable.component';
+import { AnimeDetailsComponent } from './shared/components/anime-details/anime-details.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +56,11 @@ import { TextShortenerPipe } from './shared/pipes/text-shortener.pipe';
     MangaListComponent,
     MangaDetailsComponent,
     TextShortenerPipe,
+    TrendingAnimeListComponent,
+    TrendingAnimeComponent,
+    BackToHomeComponent,
+    TrendingListReusableComponent,
+    AnimeDetailsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AnimeReccommendedDataService } from '../../services/anime-reccommended-data.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-anime-recomended',
@@ -7,6 +7,10 @@ import { AnimeReccommendedDataService } from '../../services/anime-reccommended-
   styleUrls: ['./anime-recomended.component.scss'],
 })
 export class AnimeRecomendedComponent {
-  data = this.animeData;
-  constructor(private animeData: AnimeReccommendedDataService) {}
+  animeRecList: any = this.activatedRoute.snapshot.data['animeList'].slice(
+    5,
+    -1
+  );
+
+  constructor(private activatedRoute: ActivatedRoute) {}
 }

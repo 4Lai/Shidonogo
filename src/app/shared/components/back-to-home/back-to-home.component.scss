@@ -1,0 +1,22 @@
+.back-to-home-container {
+  margin-bottom: 2rem;
+  &--link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 1rem;
+    color: inherit;
+    width: fit-content;
+    &:hover {
+      transition: 0.5s;
+      color: brown;
+    }
+  }
+  &--text {
+    font-size: 2rem;
+  }
+  &--icon {
+    width: 40px;
+    height: 40px;
+  }
+}

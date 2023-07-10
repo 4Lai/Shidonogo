@@ -10,6 +10,6 @@ import { FeaturedBookInterface } from 'src/app/shared/services/featured-book-rec
 export class HomeComponent {
   trendingData: FeaturedBookInterface = this.activatedRoute.snapshot.data[
     'data'
-  ].slice(3, -1)[Math.floor(Math.random() * 6)];
+  ].slice(3, -1)[Math.floor(Math.random() * 5 + 1)];
   constructor(private activatedRoute: ActivatedRoute) {}
 }

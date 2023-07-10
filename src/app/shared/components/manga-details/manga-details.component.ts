@@ -8,6 +8,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class MangaDetailsComponent implements OnInit {
   trendingData: any = this.activatedRoute.snapshot.data['data'];
+
   constructor(private activatedRoute: ActivatedRoute) {}
 
   ngOnInit() {}
