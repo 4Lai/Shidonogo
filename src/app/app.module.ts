@@ -30,6 +30,7 @@ import { TrendingAnimeComponent } from './pages/trending-anime/trending-anime.co
 import { BackToHomeComponent } from './shared/components/back-to-home/back-to-home.component';
 import { TrendingListReusableComponent } from './shared/components/trending-list-reusable/trending-list-reusable.component';
 import { AnimeDetailsComponent } from './shared/components/anime-details/anime-details.component';
+import { NewsletterComponent } from './shared/components/newsletter/newsletter.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { AnimeDetailsComponent } from './shared/components/anime-details/anime-d
     BackToHomeComponent,
     TrendingListReusableComponent,
     AnimeDetailsComponent,
+    NewsletterComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

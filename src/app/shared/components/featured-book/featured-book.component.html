@@ -1,9 +1,19 @@
+<div *ngIf="this.curRoute !== '/home'" class="background-container">
+  <img
+    class="background-container-img"
+    src="{{ featuredBook.attributes.coverImage?.small }}"
+    alt=""
+  />
+</div>
 <div class="featured-book">
   <h3 *ngIf="this.curRoute === '/home'" class="featured-book--title">
     Read {{ featuredBook.type }}
   </h3>
   <div class="section-two-space-elements featured-book--space-elements">
-    <a routerLink="/manga-list/{{ featuredBook.id }}">
+    <a
+      routerLink="/manga-list/{{ featuredBook.id }}"
+      [class.disabled]="this.curRoute !== '/home'"
+    >
       <div class="featured-book--img-container">
         <img
           src="{{ featuredBook.attributes.posterImage.small }}"
