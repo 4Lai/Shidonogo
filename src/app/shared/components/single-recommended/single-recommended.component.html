@@ -54,7 +54,7 @@
       </button>
     </div>
   </div>
-  <div class="single-container" *ngIf="comedyData(); else loading">
+  <div class="single-container" *ngIf="comedyData()">
     <div class="genre-single" *ngFor="let el of comedyData()">
       <div class="genre-single-smaller-container">
         <p>
@@ -87,4 +87,4 @@
     </div>
   </div>
 </div>
-<ng-template #loading> </ng-template>
+<app-footer></app-footer>

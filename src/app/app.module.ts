@@ -13,7 +13,7 @@ import { AnimeRecomendedComponent } from './shared/components/anime-recomended/a
 import { BooksRecomendedComponent } from './shared/components/books-recomended/books-recomended.component';
 import { FeaturedBookComponent } from './shared/components/featured-book/featured-book.component';
 import { FeaturedMangaComponent } from './shared/components/featured-manga/featured-manga.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { LinkComponent } from './shared/components/link/link.component';
 import { ModalComponent } from './shared/components/modal/modal.component';
 import { IframeComponent } from './shared/components/iframe/iframe.component';
@@ -31,6 +31,8 @@ import { BackToHomeComponent } from './shared/components/back-to-home/back-to-ho
 import { TrendingListReusableComponent } from './shared/components/trending-list-reusable/trending-list-reusable.component';
 import { AnimeDetailsComponent } from './shared/components/anime-details/anime-details.component';
 import { NewsletterComponent } from './shared/components/newsletter/newsletter.component';
+import { LoadingSpinnerComponent } from './shared/components/loading-spinner/loading-spinner.component';
+import { LoadingInterceptor } from './shared/interceptors/loading.interceptor';
 
 @NgModule({
   declarations: [
@@ -63,9 +65,12 @@ import { NewsletterComponent } from './shared/components/newsletter/newsletter.c
     TrendingListReusableComponent,
     AnimeDetailsComponent,
     NewsletterComponent,
+    LoadingSpinnerComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
