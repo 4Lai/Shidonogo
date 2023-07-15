@@ -33,6 +33,8 @@ import { AnimeDetailsComponent } from './shared/components/anime-details/anime-d
 import { NewsletterComponent } from './shared/components/newsletter/newsletter.component';
 import { LoadingSpinnerComponent } from './shared/components/loading-spinner/loading-spinner.component';
 import { LoadingInterceptor } from './shared/interceptors/loading.interceptor';
+import { InfoComponent } from './pages/info/info.component';
+import { AboutInfoComponent } from './shared/components/about-info/about-info.component';
 
 @NgModule({
   declarations: [
@@ -66,6 +68,8 @@ import { LoadingInterceptor } from './shared/interceptors/loading.interceptor';
     AnimeDetailsComponent,
     NewsletterComponent,
     LoadingSpinnerComponent,
+    InfoComponent,
+    AboutInfoComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [

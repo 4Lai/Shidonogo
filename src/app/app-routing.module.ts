@@ -14,6 +14,8 @@ import { animeListTrendingResolver } from './shared/resolvers/anime-list-trendin
 import { mangaListResolver } from './shared/resolvers/manga-list.resolver';
 import { animeListTrendingIdResolver } from './shared/resolvers/anime-list-trending-id.resolver';
 import { TrendingAnimeListComponent } from './shared/components/trending-anime-list/trending-anime-list.component';
+import { InfoComponent } from './pages/info/info.component';
+import { footerResolver } from './shared/resolvers/footer.resolver';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -49,6 +51,32 @@ const routes: Routes = [
     path: 'manga-list/:id',
     component: MangaDetailsComponent,
     resolve: { data: singleMangaResolverResolver },
+  },
+  {
+    path: 'about-us',
+    component: InfoComponent,
+    resolve: { info: footerResolver },
+  },
+  {
+    path: 'copyrights',
+    component: InfoComponent,
+    resolve: { info: footerResolver },
+  },
+  {
+    path: 'contact-us',
+    component: InfoComponent,
+    resolve: { info: footerResolver },
+  },
+  {
+    path: 'privacy-policy',
+    component: InfoComponent,
+    resolve: { info: footerResolver },
+  },
+  { path: 'FAQ', component: InfoComponent, resolve: { info: footerResolver } },
+  {
+    path: 'terms-of-use',
+    component: InfoComponent,
+    resolve: { info: footerResolver },
   },
   { path: '**', component: NotFoundComponent },
 ];
