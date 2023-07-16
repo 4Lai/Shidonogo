@@ -21,7 +21,7 @@ export class NavComponent implements OnInit {
 
   scrollTo() {
     if (this.router.url === '/home') {
-      window.location.reload();
+      scrollTo({ top: 0, behavior: 'smooth' });
     } else {
       this.router.navigate(['/home']);
     }

@@ -20,7 +20,7 @@
           [class.is-open]="isMenuOpened"
           *ngFor="let el of this.navigationData"
         >
-          <a routerLink="">{{ el.title }}</a>
+          <a routerLink="{{ el.url }}">{{ el.title }}</a>
         </div>
       </div>
     </div>

@@ -8,18 +8,23 @@ export class NavigationDataService {
   dataLinks: NavigationDataInterface[] = [
     {
       title: 'READ',
+      url: '/manga-list',
     },
     {
       title: 'WATCH',
+      url: '',
     },
     {
       title: 'COMMUNITY',
+      url: '',
     },
     {
       title: 'CALENDAR',
+      url: '',
     },
   ];
 }
 export interface NavigationDataInterface {
   title: string;
+  url: string;
 }
