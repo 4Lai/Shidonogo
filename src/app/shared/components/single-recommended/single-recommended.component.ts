@@ -43,4 +43,11 @@ export class SingleRecommendedComponent implements OnInit {
     this.genre = url;
     this.route.navigate(['/anime-list/' + url]);
   }
+
+  searchText: string = '';
+
+  onSearchTextEntered(search: string) {
+    this.searchText = search;
+    // console.log(this.searchText);
+  }
 }

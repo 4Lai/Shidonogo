@@ -35,6 +35,8 @@ import { LoadingSpinnerComponent } from './shared/components/loading-spinner/loa
 import { LoadingInterceptor } from './shared/interceptors/loading.interceptor';
 import { InfoComponent } from './pages/info/info.component';
 import { AboutInfoComponent } from './shared/components/about-info/about-info.component';
+import { SearchComponent } from './shared/components/search/search.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -70,8 +72,9 @@ import { AboutInfoComponent } from './shared/components/about-info/about-info.co
     LoadingSpinnerComponent,
     InfoComponent,
     AboutInfoComponent,
+    SearchComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true },
   ],
