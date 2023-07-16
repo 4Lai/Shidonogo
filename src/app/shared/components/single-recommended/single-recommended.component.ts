@@ -14,6 +14,7 @@ import { FeaturedMangaDataService } from '../../services/featured-manga-data.ser
 })
 export class SingleRecommendedComponent implements OnInit {
   comedyData = this.service.genreAnimeListSignal.asReadonly();
+  genreTypesData = this.service.genreTypes.asReadonly();
   genre = this.activatedRoute.snapshot.params['genre'];
   swtichSort: boolean = true;
   dataFrom = this.data;
@@ -27,6 +28,7 @@ export class SingleRecommendedComponent implements OnInit {
 
   ngOnInit() {
     this.service.getAnimeList(this.genre);
+    this.service.getGenreTypes();
   }
 
   sortOnClick() {
@@ -39,6 +41,6 @@ export class SingleRecommendedComponent implements OnInit {
   loadDiffData(url: string) {
     this.genre = this.activatedRoute.snapshot.params['genre'];
     this.service.getAnimeList(this.genre);
-    this.route.navigate([url]);
+    // this.route.navigate(['/anime-list/' + url]);
   }
 }
