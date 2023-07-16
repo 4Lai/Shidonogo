@@ -12,7 +12,7 @@ export class NavigationDataService {
     },
     {
       title: 'WATCH',
-      url: '/anime-list/romance',
+      url: '/anime-list/Romance',
     },
     {
       title: 'COMMUNITY',

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { SingleGenreService } from '../../services/single-genre.service';
 import { ChangeDetectionStrategy } from '@angular/core';
@@ -17,12 +17,12 @@ export class SingleRecommendedComponent implements OnInit {
   genreTypesData = this.service.genreTypes.asReadonly();
   genre = this.activatedRoute.snapshot.params['genre'];
   swtichSort: boolean = true;
-  dataFrom = this.data;
+  // dataFrom = this.data;
 
   constructor(
     private activatedRoute: ActivatedRoute,
     private service: SingleGenreService,
-    private data: FeaturedMangaDataService,
+    // private data: FeaturedMangaDataService,
     private route: Router
   ) {}
 
@@ -39,8 +39,8 @@ export class SingleRecommendedComponent implements OnInit {
   }
 
   loadDiffData(url: string) {
-    this.genre = this.activatedRoute.snapshot.params['genre'];
-    this.service.getAnimeList(this.genre);
-    // this.route.navigate(['/anime-list/' + url]);
+    this.service.getAnimeList(url);
+    this.genre = url;
+    this.route.navigate(['/anime-list/' + url]);
   }
 }

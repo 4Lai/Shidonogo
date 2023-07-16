@@ -1,15 +1,15 @@
 <div class="single-container-parent">
   <app-back-to-home></app-back-to-home>
-  <h1>Recommended {{ this.genre }} anime</h1>
+  <h1>Recommended {{ genre }} anime</h1>
   <hr />
   <p class="single-container-parent-check">Other categories</p>
   <div class="single-container-sort">
     <div class="genre">
       <a
         *ngFor="let el of this.genreTypesData()"
-        (click)="loadDiffData(el.name)"
         routerLink="/anime-list/{{ el.name }}"
         [routerLinkActive]="['active']"
+        (click)="loadDiffData(el.name)"
         >{{ el.name }}</a
       >
     </div>
@@ -55,7 +55,7 @@
       </button>
     </div>
   </div>
-  <div class="single-container" *ngIf="comedyData()">
+  <div class="single-container">
     <div class="genre-single" *ngFor="let el of comedyData()">
       <div class="genre-single-smaller-container">
         <p>
