@@ -5,6 +5,7 @@ import { firstValueFrom, map } from 'rxjs';
 @Injectable()
 export class SingleGenreService {
   readonly genreAnimeListSignal = signal<any[]>([]);
+  readonly genreTypes = signal<any[]>([]);
 
   constructor(private http: HttpClient) {}
 
@@ -25,6 +26,23 @@ export class SingleGenreService {
 
   setGenreAnimeListSignal(data: any[]) {
     this.genreAnimeListSignal.set(data);
+  }
+
+  async getGenreTypes() {
+    const genreList = await firstValueFrom(
+      this.http
+        .get<GenreTypesInterface>('https://api.jikan.moe/v4/genres/anime')
+        .pipe(
+          map((val) => {
+            return val.data;
+          })
+        )
+    );
+    this.setGenreTypeSignal(genreList);
+  }
+
+  setGenreTypeSignal(data: any[]) {
+    this.genreTypes.set(data);
   }
 }
 export interface SingleGenreInterface {
@@ -68,4 +86,15 @@ export interface SingleGenreInterface {
 export interface GenreListInterface {
   data: SingleGenreInterface[];
   pagination: any;
+}
+
+export interface GenreTypesInterface {
+  data: [
+    {
+      mal_id: number;
+      name: string;
+      url: string;
+      count: number;
+    }
+  ];
 }

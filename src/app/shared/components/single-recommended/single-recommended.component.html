@@ -1,16 +1,16 @@
 <div class="single-container-parent">
   <app-back-to-home></app-back-to-home>
-  <h1>Recommended {{ genre }} anime</h1>
+  <h1>Recommended {{ this.genre }} anime</h1>
   <hr />
   <p class="single-container-parent-check">Other categories</p>
   <div class="single-container-sort">
-    <div>
-      <app-link
-        [Hero]="el"
-        *ngFor="let el of this.dataFrom.featuredMangaLinkData"
-        (click)="loadDiffData(el.url)"
+    <div class="genre">
+      <a
+        *ngFor="let el of this.genreTypesData()"
+        (click)="loadDiffData(el.name)"
+        href="/anime-list/{{ el.name }}"
+        >{{ el.name }}</a
       >
-      </app-link>
     </div>
     <div class="single-container-sort-single">
       <p class="single-container-sort-text">Sort</p>
