@@ -8,7 +8,8 @@
       <a
         *ngFor="let el of this.genreTypesData()"
         (click)="loadDiffData(el.name)"
-        href="/anime-list/{{ el.name }}"
+        routerLink="/anime-list/{{ el.name }}"
+        [routerLinkActive]="['active']"
         >{{ el.name }}</a
       >
     </div>
