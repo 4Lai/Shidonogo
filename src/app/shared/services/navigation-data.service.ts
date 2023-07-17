@@ -15,12 +15,12 @@ export class NavigationDataService {
       url: '/anime-list/Romance',
     },
     {
-      title: 'COMMUNITY',
-      url: '',
+      title: 'TOP CHARACTERS',
+      url: '/top-characters',
     },
     {
       title: 'CALENDAR',
-      url: '',
+      url: '/calendar',
     },
   ];
 }

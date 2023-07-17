@@ -10,8 +10,4 @@ export class AboutInfoComponent {
   infoData = this.activatedRoute.snapshot.data['info'];
 
   constructor(private activatedRoute: ActivatedRoute) {}
-
-  ngOnInit() {
-    console.log(this.infoData);
-  }
 }
