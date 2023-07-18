@@ -1,43 +1,54 @@
 .top-characters-list-container {
   margin: auto auto;
+  // width: 1152px;
   width: 60%;
   margin-bottom: 4rem;
+  display: flex;
+  min-height: 68.5vh;
+  flex-direction: column;
   &-header {
+    width: 100%;
     font-size: 2rem;
     display: table-row;
     background-color: coral;
     text-align: center;
     &-rank {
-      border-right: 1px solid #f5f5f5;
+      width: 5%;
       height: 50px;
+      border-right: 1px solid #f5f5f5;
     }
     &-character {
+      width: 20%;
       border-right: 1px solid #f5f5f5;
     }
     &-about {
+      width: 30%;
       border-right: 1px solid #f5f5f5;
     }
     &-favorites {
+      width: 5%;
     }
   }
 }
 
 .ranking-list {
   &-rank {
-    width: 100px;
+    // width: 100px;
     font-size: 4rem;
     text-align: center;
     border-left: 1px solid #cccccc;
     border-right: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
   }
   &-character {
-    width: 350px;
+    // width: 350px;
     padding: 1rem;
     gap: 5rem;
     display: flex;
     align-items: center;
     font-size: 1.5rem;
     border-right: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
     &-image {
       width: 100px;
     }
@@ -46,23 +57,21 @@
     padding: 1rem;
     font-size: 1.5rem;
     border-right: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
     text-align: justify;
   }
   &-favorites {
-    width: 100px;
+    // width: 100px;
     text-align: center;
     font-size: 2.5rem;
     border-right: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
   }
 }
 
 .odd {
   background-color: #e0e0e0;
   border-right: 1px solid black;
-}
-
-.last-child {
-  border-bottom: 1px solid #cccccc;
 }
 
 h1 {
@@ -74,4 +83,14 @@ h1 {
   margin-bottom: 4rem;
   font-size: 4.8rem;
   font-family: inherit;
+}
+
+.single-container-sort-icon {
+  width: 18px;
+  height: 18px;
+}
+
+button {
+  border: none;
+  cursor: pointer;
 }

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { map } from 'rxjs';
+import { sortByInt, sortByInte } from '../../helpers/sort-by';
 
 @Component({
   selector: 'app-top-characters-list',
@@ -10,11 +10,16 @@ import { map } from 'rxjs';
 export class TopCharactersListComponent {
   topCharactersDataList = this.activatedRoute.snapshot.data['characters'];
   searchText: string = '';
+  swtichSort: boolean = false;
 
-  
   constructor(private activatedRoute: ActivatedRoute) {}
-  
+
   onSearchTextEntered(search: string) {
     this.searchText = search;
+  }
+
+  sortOnClick() {
+    this.swtichSort = !this.swtichSort;
+    sortByInt(this.topCharactersDataList.data, 'favorites', this.swtichSort);
   }
 }

@@ -1,41 +1,91 @@
 <div class="top-characters-list-container">
   <app-back-to-home></app-back-to-home>
   <h1>Top Characters</h1>
-  <tbody class="top-characters-list-container-body">
+  <div>
+    <app-search
+      (searchTextChanged)="onSearchTextEntered($any($event))"
+    ></app-search>
+    <div class="single-container-sort-single">
+      <p class="single-container-sort-text">Sort</p>
+      <button
+        type="button"
+        (click)="sortOnClick()"
+        class="single-container-sort-btn"
+      >
+        <svg
+          *ngIf="swtichSort === true; else icon"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="single-container-sort-icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18"
+          />
+        </svg>
+
+        <ng-template #icon>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="single-container-sort-icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3"
+            />
+          </svg>
+        </ng-template>
+      </button>
+    </div>
+  </div>
+  <tbody>
     <tr class="top-characters-list-container-header">
       <td class="top-characters-list-container-header-rank">Rank</td>
       <td class="top-characters-list-container-header-character">Character</td>
       <td class="top-characters-list-container-header-about">About</td>
       <td class="top-characters-list-container-header-favorites">Favorites</td>
     </tr>
-    <tr
-      class="ranking-list"
+    <ng-container
       *ngFor="let el of this.topCharactersDataList.data; let i = index"
-      [ngClass]="{ odd: i % 2 !== 0 }"
     >
-      <td class="ranking-list-rank" [ngClass]="{ 'last-child': i === 24 }">
-        {{ i + 1 }}
-      </td>
-      <td class="ranking-list-character" [ngClass]="{ 'last-child': i === 24 }">
-        <div>
-          <img
-            class="ranking-list-character-image"
-            src="{{ el.images.webp.image_url }}"
-            alt=""
-          />
-        </div>
-        <div>{{ el.name }}</div>
-      </td>
-      <td class="ranking-list-about" [ngClass]="{ 'last-child': i === 24 }">
-        <div>
-          {{ el.about | textShortener : 500 }}
-        </div>
-      </td>
-      <td class="ranking-list-favorites" [ngClass]="{ 'last-child': i === 24 }">
-        <div>
-          {{ el.favorites }}
-        </div>
-      </td>
-    </tr>
+      <tr
+        class="ranking-list"
+        [ngClass]="{ odd: i % 2 !== 0 }"
+        *ngIf="searchText === '' || el.name.toLowerCase().includes(searchText)"
+      >
+        <td class="ranking-list-rank">
+          {{ i + 1 }}
+        </td>
+        <td class="ranking-list-character">
+          <div>
+            <img
+              class="ranking-list-character-image"
+              src="{{ el.images.webp.image_url }}"
+              alt=""
+            />
+          </div>
+          <div>{{ el.name }}</div>
+        </td>
+        <td class="ranking-list-about">
+          <div>
+            {{ el.about | textShortener : 500 }}
+          </div>
+        </td>
+        <td class="ranking-list-favorites">
+          <div>
+            {{ el.favorites }}
+          </div>
+        </td>
+      </tr>
+    </ng-container>
   </tbody>
 </div>

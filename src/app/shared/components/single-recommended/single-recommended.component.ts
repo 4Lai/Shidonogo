@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { SingleGenreService } from '../../services/single-genre.service';
 import { ChangeDetectionStrategy } from '@angular/core';
