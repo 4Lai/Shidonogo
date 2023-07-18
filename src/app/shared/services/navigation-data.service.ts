@@ -15,7 +15,7 @@ export class NavigationDataService {
       url: '/anime-list/Romance',
     },
     {
-      title: 'TOP CHARACTERS',
+      title: 'CHARACTERS',
       url: '/top-characters',
     },
     {

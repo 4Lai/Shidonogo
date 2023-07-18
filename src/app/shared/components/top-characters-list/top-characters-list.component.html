@@ -1,16 +1,16 @@
 <div class="top-characters-list-container">
   <app-back-to-home></app-back-to-home>
   <h1>Top Characters</h1>
-  <div>
+  <div class="top-characters-list-container-concat">
     <app-search
       (searchTextChanged)="onSearchTextEntered($any($event))"
     ></app-search>
-    <div class="single-container-sort-single">
-      <p class="single-container-sort-text">Sort</p>
+    <div class="top-characters-list-container-sort">
+      <p class="top-characters-list-container-sort-text">Sort</p>
       <button
         type="button"
         (click)="sortOnClick()"
-        class="single-container-sort-btn"
+        class="top-characters-list-container-sort-btn"
       >
         <svg
           *ngIf="swtichSort === true; else icon"
@@ -19,7 +19,7 @@
           viewBox="0 0 24 24"
           stroke-width="1.5"
           stroke="currentColor"
-          class="single-container-sort-icon"
+          class="top-characters-list-container-sort-icon"
         >
           <path
             stroke-linecap="round"
@@ -35,7 +35,7 @@
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="single-container-sort-icon"
+            class="top-characters-list-container-sort-icon"
           >
             <path
               stroke-linecap="round"
@@ -62,9 +62,7 @@
         [ngClass]="{ odd: i % 2 !== 0 }"
         *ngIf="searchText === '' || el.name.toLowerCase().includes(searchText)"
       >
-        <td class="ranking-list-rank">
-          {{ i + 1 }}
-        </td>
+        <td class="ranking-list-rank">{{ this.swtichSort === false ? i + 1 : 25 - i }}</td>
         <td class="ranking-list-character">
           <div>
             <img

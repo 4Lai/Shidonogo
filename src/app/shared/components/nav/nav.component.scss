@@ -6,7 +6,6 @@
   z-index: 9;
   &--top-nav {
     @media only screen and (min-width: 0px) and (max-width: 640px) {
-      // position: absolute;
       background-color: inherit;
       width: 100%;
     }
@@ -92,7 +91,7 @@
           }
           &:visited {
             text-decoration: none;
-            color: inherit;
+            color: black;
           }
           &:hover {
             background-color: green;
