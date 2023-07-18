@@ -37,6 +37,8 @@ import { InfoComponent } from './pages/info/info.component';
 import { AboutInfoComponent } from './shared/components/about-info/about-info.component';
 import { SearchComponent } from './shared/components/search/search.component';
 import { FormsModule } from '@angular/forms';
+import { TopCharactersComponent } from './pages/top-characters/top-characters.component';
+import { TopCharactersListComponent } from './shared/components/top-characters-list/top-characters-list.component';
 
 @NgModule({
   declarations: [
@@ -73,6 +75,8 @@ import { FormsModule } from '@angular/forms';
     InfoComponent,
     AboutInfoComponent,
     SearchComponent,
+    TopCharactersComponent,
+    TopCharactersListComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [

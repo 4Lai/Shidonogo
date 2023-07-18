@@ -1,0 +1,77 @@
+.top-characters-list-container {
+  margin: auto auto;
+  width: 60%;
+  margin-bottom: 4rem;
+  &-header {
+    font-size: 2rem;
+    display: table-row;
+    background-color: coral;
+    text-align: center;
+    &-rank {
+      border-right: 1px solid #f5f5f5;
+      height: 50px;
+    }
+    &-character {
+      border-right: 1px solid #f5f5f5;
+    }
+    &-about {
+      border-right: 1px solid #f5f5f5;
+    }
+    &-favorites {
+    }
+  }
+}
+
+.ranking-list {
+  &-rank {
+    width: 100px;
+    font-size: 4rem;
+    text-align: center;
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+  }
+  &-character {
+    width: 350px;
+    padding: 1rem;
+    gap: 5rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    border-right: 1px solid #cccccc;
+    &-image {
+      width: 100px;
+    }
+  }
+  &-about {
+    padding: 1rem;
+    font-size: 1.5rem;
+    border-right: 1px solid #cccccc;
+    text-align: justify;
+  }
+  &-favorites {
+    width: 100px;
+    text-align: center;
+    font-size: 2.5rem;
+    border-right: 1px solid #cccccc;
+  }
+}
+
+.odd {
+  background-color: #e0e0e0;
+  border-right: 1px solid black;
+}
+
+.last-child {
+  border-bottom: 1px solid #cccccc;
+}
+
+h1 {
+  border-top-left-radius: 40px 40px;
+  border-bottom-right-radius: 40px 40px;
+  width: fit-content;
+  padding: 2rem;
+  background-color: rgb(255, 208, 0);
+  margin-bottom: 4rem;
+  font-size: 4.8rem;
+  font-family: inherit;
+}

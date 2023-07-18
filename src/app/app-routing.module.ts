@@ -16,6 +16,8 @@ import { animeListTrendingIdResolver } from './shared/resolvers/anime-list-trend
 import { TrendingAnimeListComponent } from './shared/components/trending-anime-list/trending-anime-list.component';
 import { InfoComponent } from './pages/info/info.component';
 import { footerResolver } from './shared/resolvers/footer.resolver';
+import { TopCharactersComponent } from './pages/top-characters/top-characters.component';
+import { topCharactersResolver } from './shared/resolvers/top-characters.resolver';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -51,6 +53,11 @@ const routes: Routes = [
     path: 'manga-list/:id',
     component: MangaDetailsComponent,
     resolve: { data: singleMangaResolverResolver },
+  },
+  {
+    path: 'top-characters',
+    component: TopCharactersComponent,
+    resolve: { characters: topCharactersResolver },
   },
   {
     path: 'about-us',
