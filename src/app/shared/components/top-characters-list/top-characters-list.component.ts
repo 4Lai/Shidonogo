@@ -11,6 +11,7 @@ export class TopCharactersListComponent {
   topCharactersDataList = this.activatedRoute.snapshot.data['characters'];
   searchText: string = '';
   swtichSort: boolean = false;
+  searchTitle:string = 'name'
 
   constructor(private activatedRoute: ActivatedRoute) {}
 

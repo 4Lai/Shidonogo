@@ -2,7 +2,7 @@
   <span>Search:</span>
   <input
     type="text"
-    placeholder="Enter a title..."
+    placeholder="Enter a {{ this.searchHolder }}..."
     [(ngModel)]="enteredSearchValue"
     (input)="onSearchTextChanged()"
   />

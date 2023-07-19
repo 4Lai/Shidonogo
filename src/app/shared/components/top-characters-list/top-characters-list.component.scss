@@ -62,7 +62,7 @@
     &-about {
       width: 30%;
       border-right: 1px solid #f5f5f5;
-      @media only screen and (min-width: 0px) and (max-width: 604px) {
+      @media only screen and (min-width: 0px) and (max-width: 685px) {
         display: none;
       }
     }
@@ -99,10 +99,10 @@
     }
     &-image {
       width: 80px;
-      @media only screen and (min-width: 376px) and (max-width: 640px) {
+      @media only screen and (min-width: 376px) and (max-width: 500px) {
         width: 100px;
       }
-      @media only screen and (min-width: 641px) and (max-width: 2560px) {
+      @media only screen and (min-width: 501px) and (max-width: 2560px) {
         width: 167px;
       }
     }
@@ -113,10 +113,10 @@
     border-right: 1px solid #cccccc;
     border-bottom: 1px solid #cccccc;
     text-align: justify;
-    @media only screen and (min-width: 0px) and (max-width: 604px) {
+    @media only screen and (min-width: 0px) and (max-width: 685px) {
       display: none;
     }
-    @media only screen and (min-width: 605px) and (max-width: 1200px) {
+    @media only screen and (min-width: 686px) and (max-width: 1200px) {
       font-size: 1.3rem;
     }
     @media only screen and (min-width: 1201px) and (max-width: 1800px) {

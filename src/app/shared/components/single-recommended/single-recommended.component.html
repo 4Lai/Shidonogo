@@ -57,9 +57,13 @@
   </div>
   <app-search
     (searchTextChanged)="onSearchTextEntered($any($event))"
+    [searchHolder]="searchTitle"
   ></app-search>
   <div class="single-container">
-    <ng-container class="single-container-middle" *ngFor="let el of comedyData()">
+    <ng-container
+      class="single-container-middle"
+      *ngFor="let el of comedyData()"
+    >
       <div
         class="genre-single"
         *ngIf="searchText === '' || el.title.toLowerCase().includes(searchText)"
