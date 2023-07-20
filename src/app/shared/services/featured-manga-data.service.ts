@@ -8,32 +8,32 @@ export class FeaturedMangaDataService {
 
   featuredMangaLinkData: featuredMangaDataInterface[] = [
     {
-      title: 'SHONEN JUMP',
-      url: '/anime-list/shonen-jump',
+      title: 'SHOUNEN',
+      url: '/anime-list/Shounen',
       cssClasses: 'featured--links-shonen',
       genre: 'shonen',
     },
     {
       title: 'Comedy',
-      url: '/anime-list/comedy',
+      url: '/anime-list/Comedy',
       cssClasses: 'featured--links',
       genre: 'comedy',
     },
     {
       title: 'Romance',
-      url: '/anime-list/romance',
+      url: '/anime-list/Romance',
       cssClasses: 'featured--links',
       genre: 'romance',
     },
     {
       title: 'Music',
-      url: '/anime-list/music',
+      url: '/anime-list/Music',
       cssClasses: 'featured--links',
       genre: 'music',
     },
     {
       title: 'Adventure',
-      url: '/anime-list/adventure',
+      url: '/anime-list/Adventure',
       cssClasses: 'featured--links',
       genre: 'adventure',
     },

@@ -19,8 +19,8 @@ export class NavigationDataService {
       url: '/top-characters',
     },
     {
-      title: 'CALENDAR',
-      url: '/calendar',
+      title: 'SEASONS',
+      url: '/seasons',
     },
   ];
 }

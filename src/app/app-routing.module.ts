@@ -18,6 +18,9 @@ import { InfoComponent } from './pages/info/info.component';
 import { footerResolver } from './shared/resolvers/footer.resolver';
 import { TopCharactersComponent } from './pages/top-characters/top-characters.component';
 import { topCharactersResolver } from './shared/resolvers/top-characters.resolver';
+import { SeasonsComponent } from './pages/seasons/seasons.component';
+import { seasonsNowResolver } from './shared/resolvers/seasons-now.resolver';
+import { seasonsUpcomingResolver } from './shared/resolvers/seasons-upcoming.resolver';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -59,6 +62,15 @@ const routes: Routes = [
     component: TopCharactersComponent,
     resolve: { characters: topCharactersResolver },
   },
+  {
+    path: 'seasons',
+    component: SeasonsComponent,
+    resolve: {
+      seasonNow: seasonsNowResolver,
+      seasonUpcoming: seasonsUpcomingResolver,
+    },
+  },
+  { path: 'seasons/:id', component: SeasonsComponent },
   {
     path: 'about-us',
     component: InfoComponent,

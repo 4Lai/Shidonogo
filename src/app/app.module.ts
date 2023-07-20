@@ -39,6 +39,8 @@ import { SearchComponent } from './shared/components/search/search.component';
 import { FormsModule } from '@angular/forms';
 import { TopCharactersComponent } from './pages/top-characters/top-characters.component';
 import { TopCharactersListComponent } from './shared/components/top-characters-list/top-characters-list.component';
+import { SeasonsComponent } from './pages/seasons/seasons.component';
+import { SeasonsAllComponent } from './shared/components/seasons-all/seasons-all.component';
 
 @NgModule({
   declarations: [
@@ -77,6 +79,8 @@ import { TopCharactersListComponent } from './shared/components/top-characters-l
     SearchComponent,
     TopCharactersComponent,
     TopCharactersListComponent,
+    SeasonsComponent,
+    SeasonsAllComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [

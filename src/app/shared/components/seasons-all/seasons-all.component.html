@@ -1,0 +1,54 @@
+<div class="seasons-all-container">
+  <app-back-to-home></app-back-to-home>
+  <h1>Seasons</h1>
+
+  <h2>Summer 2023 Anime</h2>
+  <hr />
+  <div class="seasons-all-container--current">
+    <div
+      class="seasons-all-container--current-element"
+      *ngFor="let el of this.seasonNow.data"
+    >
+      <a
+        class="seasons-all-container--current-element-link"
+        routerLink="/seasons/{{ el.mal_id }}"
+      >
+        <h3 class="seasons-all-container--current-element-h3">
+          <span class="seasons-all-container--current-element-h3-title">{{
+            el.title
+          }}</span>
+        </h3>
+        <img
+          class="seasons-all-container--current-element-img"
+          src="{{ el.images.webp.image_url }}"
+          alt=""
+        />
+      </a>
+    </div>
+  </div>
+  
+  <h2>Upcoming Anime</h2>
+  <hr />
+  <div class="seasons-all-container--current">
+    <div
+      class="seasons-all-container--current-element"
+      *ngFor="let el of this.seasonUpcoming.data"
+    >
+      <a
+        class="seasons-all-container--current-element-link"
+        routerLink="/seasons/{{ el.mal_id }}"
+      >
+        <h3 class="seasons-all-container--current-element-h3">
+          <span class="seasons-all-container--current-element-h3-title">{{
+            el.title
+          }}</span>
+        </h3>
+        <img
+          class="seasons-all-container--current-element-img"
+          src="{{ el.images.webp.image_url }}"
+          alt=""
+        />
+      </a>
+    </div>
+  </div>
+</div>
