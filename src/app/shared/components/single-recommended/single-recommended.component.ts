@@ -16,7 +16,7 @@ export class SingleRecommendedComponent implements OnInit {
   genreTypesData = this.service.genreTypes.asReadonly();
   genre = this.activatedRoute.snapshot.params['genre'];
   swtichSort: boolean = true;
-  searchTitle:string = 'title'
+  searchTitle: string = 'title';
 
   constructor(
     private activatedRoute: ActivatedRoute,

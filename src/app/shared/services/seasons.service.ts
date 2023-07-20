@@ -1,10 +1,13 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
+import { firstValueFrom, map } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class SeasonsService {
+  readonly seasonBy = signal<any[]>([])
+
   constructor(private http: HttpClient) {}
 
   getSeasonNow() {
@@ -19,7 +22,18 @@ export class SeasonsService {
     );
   }
 
-  
+  async getSeasonBy(year: number, season: string) {
+    const seasonBy = await firstValueFrom(
+      this.http.get<seasonInterface>(
+        `https://api.jikan.moe/v4/seasons/${year}/${season}`
+      ).pipe(map(val => val))
+    );
+    this.setSeasonBy(seasonBy)
+  }
+
+  setSeasonBy(data: seasonInterface) {
+    this.seasonBy.set(data.data)
+  }
 }
 
 export interface seasonInterface {
