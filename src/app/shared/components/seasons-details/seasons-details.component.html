@@ -1,0 +1,40 @@
+<div class="season-details-container">
+  <app-back-to-home></app-back-to-home>
+  <h1>Details</h1>
+
+  <h2>{{ this.seasonDetails.data.title }}</h2>
+  <div class="season-details-container-element">
+    <div>
+      <img
+        src="{{ this.seasonDetails.data.images.webp.large_image_url }}"
+        alt=""
+      />
+    </div>
+    <div>
+      <div>
+        <p>Episodes: {{ this.seasonDetails.data.episodes }}</p>
+        <p>Status: {{ this.seasonDetails.data.status }}</p>
+        <p>Airing: {{ this.seasonDetails.data.airing }}</p>
+        <p>Duration: {{ this.seasonDetails.data.duration }}</p>
+        <p>Rating: {{ this.seasonDetails.data.rating }}</p>
+        <p>Score: {{ this.seasonDetails.data.score }}</p>
+        <p>Popularity: {{ this.seasonDetails.data.popularity }}</p>
+        <p>Season: {{ this.seasonDetails.data.season }}</p>
+        <p>Year: {{ this.seasonDetails.data.year }}</p>
+        <p>Type: {{ this.seasonDetails.data.genres[0].type }}</p>
+        <p>Genre: {{ this.seasonDetails.data.genres[0].name }}</p>
+      </div>
+      <div>
+        <p>Trailer:</p>
+        <iframe
+          [src]="this.seasonDetails.data.trailer.embed_url | safe"
+          width="400px"
+          height="300px"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

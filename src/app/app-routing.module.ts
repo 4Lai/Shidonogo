@@ -21,6 +21,8 @@ import { topCharactersResolver } from './shared/resolvers/top-characters.resolve
 import { SeasonsComponent } from './pages/seasons/seasons.component';
 import { seasonsNowResolver } from './shared/resolvers/seasons-now.resolver';
 import { seasonsUpcomingResolver } from './shared/resolvers/seasons-upcoming.resolver';
+import { SeasonsDetailsComponent } from './shared/components/seasons-details/seasons-details.component';
+import { seasonsAnimeIdDetailsResolver } from './shared/resolvers/seasons-anime-id-details.resolver';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -70,7 +72,11 @@ const routes: Routes = [
       seasonUpcoming: seasonsUpcomingResolver,
     },
   },
-  { path: 'seasons/:id', component: SeasonsComponent },
+  {
+    path: 'seasons/:id',
+    component: SeasonsDetailsComponent,
+    resolve: { details: seasonsAnimeIdDetailsResolver },
+  },
   {
     path: 'about-us',
     component: InfoComponent,

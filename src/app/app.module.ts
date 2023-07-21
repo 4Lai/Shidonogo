@@ -41,6 +41,8 @@ import { TopCharactersComponent } from './pages/top-characters/top-characters.co
 import { TopCharactersListComponent } from './shared/components/top-characters-list/top-characters-list.component';
 import { SeasonsComponent } from './pages/seasons/seasons.component';
 import { SeasonsAllComponent } from './shared/components/seasons-all/seasons-all.component';
+import { SeasonsDetailsComponent } from './shared/components/seasons-details/seasons-details.component';
+import { SafePipe } from './shared/pipes/safe.pipe';
 
 @NgModule({
   declarations: [
@@ -81,6 +83,8 @@ import { SeasonsAllComponent } from './shared/components/seasons-all/seasons-all
     TopCharactersListComponent,
     SeasonsComponent,
     SeasonsAllComponent,
+    SeasonsDetailsComponent,
+    SafePipe,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [
