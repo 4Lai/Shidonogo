@@ -3,36 +3,127 @@
   <h1>Details</h1>
 
   <h2>{{ this.seasonDetails.data.title }}</h2>
-  <div class="season-details-container-element">
-    <div>
+  <hr class="hr-top" />
+  <div class="season-details-container-content">
+    <div class="season-details-container-content-left">
       <img
+        class="season-details-container-content-left-img"
         src="{{ this.seasonDetails.data.images.webp.large_image_url }}"
         alt=""
       />
+      <br />
+      <h3>Information</h3>
+      <hr class="hr-left" />
+      <p class="season-details-container-content-left-text">
+        Episodes:
+        {{
+          this.seasonDetails.data.episodes !== null
+            ? this.seasonDetails.data.episodes
+            : "?"
+        }}
+      </p>
+      <p class="season-details-container-content-left-text">
+        Airing:
+        {{
+          this.seasonDetails.data.status !== null
+            ? this.seasonDetails.data.status
+            : "?"
+        }}
+      </p>
+      <p class="season-details-container-content-left-text">
+        Aired:
+        {{
+          this.seasonDetails.data.aired.from
+            ? this.seasonDetails.data.aired.from.substring(0, 7)
+            : "?"
+        }}
+        to
+        {{
+          this.seasonDetails.data.aired.to !== null
+            ? this.seasonDetails.data.aired.to.substring(0, 10)
+            : "?"
+        }}
+      </p>
+      <p class="season-details-container-content-left-text">
+        Duration:
+        {{
+          this.seasonDetails.data.duration !== null
+            ? this.seasonDetails.data.duration
+            : "?"
+        }}
+      </p>
+      <p class="season-details-container-content-left-text">
+        Season:
+        {{
+          this.seasonDetails.data.season !== null
+            ? this.seasonDetails.data.season
+            : "?"
+        }}
+      </p>
+      <p class="season-details-container-content-left-text">
+        Year:
+        {{
+          this.seasonDetails.data.year !== null
+            ? this.seasonDetails.data.year
+            : "?"
+        }}
+      </p>
+      <p class="season-details-container-content-left-text">
+        Type:
+        {{
+          this.seasonDetails.data.genres[0].type !== null
+            ? this.seasonDetails.data.genres[0].type
+            : "?"
+        }}
+      </p>
+      <p class="season-details-container-content-left-text">
+        Genre:
+        {{
+          this.seasonDetails.data.genres[0].name !== null
+            ? this.seasonDetails.data.genres[0].name
+            : "?"
+        }}
+      </p>
     </div>
     <div>
-      <div>
-        <p>Episodes: {{ this.seasonDetails.data.episodes }}</p>
-        <p>Status: {{ this.seasonDetails.data.status }}</p>
-        <p>Airing: {{ this.seasonDetails.data.airing }}</p>
-        <p>Duration: {{ this.seasonDetails.data.duration }}</p>
-        <p>Rating: {{ this.seasonDetails.data.rating }}</p>
-        <p>Score: {{ this.seasonDetails.data.score }}</p>
-        <p>Popularity: {{ this.seasonDetails.data.popularity }}</p>
-        <p>Season: {{ this.seasonDetails.data.season }}</p>
-        <p>Year: {{ this.seasonDetails.data.year }}</p>
-        <p>Type: {{ this.seasonDetails.data.genres[0].type }}</p>
-        <p>Genre: {{ this.seasonDetails.data.genres[0].name }}</p>
-      </div>
-      <div>
-        <p>Trailer:</p>
-        <iframe
-          [src]="this.seasonDetails.data.trailer.embed_url | safe"
-          width="400px"
-          height="300px"
-          frameborder="0"
-          allowfullscreen
-        ></iframe>
+      <div class="season-details-container-content-right">
+        <div class="season-details-container-content-right-header">
+          <p class="season-details-container-content-right-text">
+            Score:
+            {{
+              this.seasonDetails.data.score !== null
+                ? this.seasonDetails.data.score
+                : "?"
+            }}
+          </p>
+
+          <p class="season-details-container-content-right-text border">
+            Rating:
+            {{
+              this.seasonDetails.data.rating !== null
+                ? this.seasonDetails.data.rating
+                : "?"
+            }}
+          </p>
+
+          <p class="season-details-container-content-right-text">
+            Popularity: #{{
+              this.seasonDetails.data.popularity !== null
+                ? this.seasonDetails.data.popularity
+                : "?"
+            }}
+          </p>
+        </div>
+        <!-- <p>Trailer:</p> -->
+        <div>
+          <iframe
+            [src]="this.seasonDetails.data.trailer.embed_url | safe"
+            width="760px"
+            height="424px"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
       </div>
     </div>
   </div>

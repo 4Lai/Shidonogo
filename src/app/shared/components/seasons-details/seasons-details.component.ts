@@ -15,5 +15,6 @@ export class SeasonsDetailsComponent {
     console.log(this.seasonDetails);
     console.log(this.seasonDetails.data.trailer.youtube_id);
     console.log(this.seasonDetails.data.trailer.embed_url);
+    console.log(this.seasonDetails.data.aired.from);
   }
 }
