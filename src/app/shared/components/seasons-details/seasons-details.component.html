@@ -1,7 +1,6 @@
 <div class="season-details-container">
   <app-back-to-home></app-back-to-home>
   <h1>Details</h1>
-
   <h2>{{ this.seasonDetails.data.title }}</h2>
   <hr class="hr-top" />
   <div class="season-details-container-content">
@@ -85,7 +84,6 @@
         }}
       </p>
     </div>
-    <div>
       <div class="season-details-container-content-right">
         <div class="season-details-container-content-right-header">
           <p class="season-details-container-content-right-text">
@@ -96,7 +94,6 @@
                 : "?"
             }}
           </p>
-
           <p class="season-details-container-content-right-text border">
             Rating:
             {{
@@ -105,7 +102,6 @@
                 : "?"
             }}
           </p>
-
           <p class="season-details-container-content-right-text">
             Popularity: #{{
               this.seasonDetails.data.popularity !== null
@@ -113,19 +109,15 @@
                 : "?"
             }}
           </p>
-        </div>
-        <!-- <p>Trailer:</p> -->
-        <div>
-          <iframe
+        </div>        
+          <iframe *ngIf="this.seasonDetails.data.trailer.embed_url !== null"
+            class="season-details-container-content-right-iframe"
             [src]="this.seasonDetails.data.trailer.embed_url | safe"
-            width="760px"
-            height="424px"
             frameborder="0"
             allowfullscreen
           ></iframe>
-        </div>
+        
       </div>
-    </div>
   </div>
 </div>
 <app-footer></app-footer>
