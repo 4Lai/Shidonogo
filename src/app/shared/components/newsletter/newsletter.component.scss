@@ -1,0 +1,186 @@
+.newsletter-container-background {
+  background-image: url(../../../../assets/img/newsletter.jpg);
+  height: 250px;
+  display: flex;
+  align-items: center;
+  @media only screen and (min-width: 641px) and (max-width: 960px) {
+    height: 300px;
+  }
+  @media only screen and (min-width: 961px) and (max-width: 1600px) {
+    height: 300px;
+  }
+  @media only screen and (min-width: 1601px) and (max-width: 2560px) {
+    height: 300px;
+  }
+}
+
+.newsletter-container {
+  margin-left: 1.6rem;
+  margin-right: 1.6rem;
+  display: grid;
+  grid-template-columns: auto;
+  align-items: center;
+  position: relative;
+  gap: 2rem;
+  width: 100%;
+  @media only screen and (min-width: 0px) and (max-width: 375px) {
+    text-align: center;
+  }
+  @media only screen and (min-width: 376px) and (max-width: 640px) {
+    text-align: center;
+  }
+  @media only screen and (min-width: 641px) and (max-width: 960px) {
+    text-align: center;
+  }
+  @media only screen and (min-width: 961px) and (max-width: 1600px) {
+    text-align: center;
+  }
+  @media only screen and (min-width: 1601px) and (max-width: 2560px) {
+    gap: 8rem;
+    width: 60%;
+    margin: auto auto;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+  }
+
+  &-text {
+    color: #fff;
+    text-shadow: 4px 4px 0px rgba(66, 68, 90, 1);
+    @media only screen and (min-width: 0px) and (max-width: 375px) {
+      font-size: 2rem;
+    }
+    @media only screen and (min-width: 376px) and (max-width: 640px) {
+      font-size: 2.5rem;
+    }
+    @media only screen and (min-width: 641px) and (max-width: 960px) {
+      font-size: 3rem;
+    }
+    @media only screen and (min-width: 961px) and (max-width: 1600px) {
+      font-size: 3.3rem;
+    }
+    @media only screen and (min-width: 1601px) and (max-width: 2560px) {
+      font-size: 3.6rem;
+    }
+  }
+
+  &-sign {
+    @media only screen and (min-width: 1601px) and (max-width: 2560px) {
+      display: grid;
+      align-items: center;
+      grid-template-columns: auto auto;
+    }
+
+    &-input {
+      font-family: inherit;
+      vertical-align: center;
+      text-justify: center;
+      width: 100px;
+      height: 15px;
+      @media only screen and (min-width: 0px) and (max-width: 375px) {
+        padding-left: 1rem;
+        font-size: 1.1rem;
+        width: 150px;
+        height: 30px;
+      }
+      @media only screen and (min-width: 376px) and (max-width: 640px) {
+        font-size: 1.4rem;
+        width: 150px;
+        height: 30px;
+        padding-left: 1rem;
+      }
+      @media only screen and (min-width: 641px) and (max-width: 960px) {
+        font-size: 1.7rem;
+        width: 190px;
+        height: 40px;
+        padding-left: 1rem;
+      }
+      @media only screen and (min-width: 961px) and (max-width: 1600px) {
+        font-size: 2.1rem;
+        width: 225px;
+        height: 50px;
+        padding-left: 1rem;
+      }
+      @media only screen and (min-width: 1601px) and (max-width: 2560px) {
+        width: 300px;
+        font-size: 2.4rem;
+        height: 60px;
+        padding: 2rem;
+      }
+    }
+
+    &-btn {
+      font-family: inherit;
+      width: 33px;
+      vertical-align: center;
+      text-align: center;
+      text-justify: center;
+      height: 15px;
+      font-size: 1.1rem;
+      color: #fff;
+      background-color: brown;
+      border: none;
+      cursor: pointer;
+      @media only screen and (min-width: 0px) and (max-width: 375px) {
+        width: 50px;
+        height: 30px;
+      }
+      @media only screen and (min-width: 376px) and (max-width: 640px) {
+        font-size: 1.4rem;
+        width: 50px;
+        height: 30px;
+      }
+      @media only screen and (min-width: 641px) and (max-width: 960px) {
+        font-size: 1.7rem;
+        width: 63px;
+        height: 40px;
+      }
+      @media only screen and (min-width: 961px) and (max-width: 1600px) {
+        font-size: 2.1rem;
+        width: 75px;
+        height: 50px;
+      }
+      @media only screen and (min-width: 1601px) and (max-width: 2560px) {
+        width: 100px;
+        font-size: 2.4rem;
+        height: 60px;
+        padding: 1rem;
+      }
+    }
+  }
+}
+
+.invalid {
+  color: red;
+  text-shadow: 4px 4px 5px rgba(66, 68, 90, 1);
+  position: absolute;
+  margin-top: 0.5rem;
+  @media only screen and (min-width: 0px) and (max-width: 375px) {
+    font-size: 1.2rem;
+    left: 50%;
+    transform: translate(-50%, 0%);
+  }
+  @media only screen and (min-width: 376px) and (max-width: 640px) {
+    font-size: 1.4rem;
+    left: 50%;
+    transform: translate(-50%, 0%);
+  }
+  @media only screen and (min-width: 641px) and (max-width: 960px) {
+    font-size: 1.6rem;
+    left: 50%;
+    transform: translate(-50%, 0%);
+  }
+  @media only screen and (min-width: 961px) and (max-width: 1600px) {
+    font-size: 1.8rem;
+    left: 50%;
+    transform: translate(-50%, 0%);
+  }
+  @media only screen and (min-width: 1601px) and (max-width: 2560px) {
+    font-size: 2rem;
+    margin-top: 0rem;
+    bottom: 0;
+  }
+}
+
+.ng-invalid:not(form).ng-touched {
+  border: 1px solid red;
+}

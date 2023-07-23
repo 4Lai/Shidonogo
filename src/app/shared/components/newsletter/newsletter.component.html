@@ -1,1 +1,40 @@
-<div></div>
+<div class="newsletter-container-background">
+  <div class="newsletter-container">
+
+    <div class="newsletter-container-text">
+      <p>Get the latest news!</p>
+      <p>You will never miss anything subscribing to our newsletter.</p>
+    </div>
+
+    <div class="newsletter-container-sign">
+      <form #postForm="ngForm" (ngSubmit)="sendEmail(postForm.value)">
+        <input
+          required
+          class="newsletter-container-sign-input"
+          placeholder="Enter an email..."
+          ngModel
+          type="email"
+          name="email"
+          id="email"
+          email
+        />
+        <button
+          class="newsletter-container-sign-btn"
+          type="submit"
+          [disabled]="!postForm.valid"
+        >
+          Sign Up
+        </button>
+        <div
+          class="invalid"
+          [hidden]="
+            (postForm.untouched && postForm.invalid) ||
+            (postForm.touched && postForm.valid) || postForm.valid
+          "
+        >
+          <p>Enter a valid email!</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

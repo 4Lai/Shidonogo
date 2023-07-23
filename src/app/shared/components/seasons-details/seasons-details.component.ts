@@ -10,11 +10,4 @@ export class SeasonsDetailsComponent {
   seasonDetails: any = this.activateRoute.snapshot.data['details'];
 
   constructor(private activateRoute: ActivatedRoute) {}
-
-  ngOnInit() {
-    console.log(this.seasonDetails);
-    console.log(this.seasonDetails.data.trailer.youtube_id);
-    console.log(this.seasonDetails.data.trailer.embed_url);
-    console.log(this.seasonDetails.data.aired.from);
-  }
 }
