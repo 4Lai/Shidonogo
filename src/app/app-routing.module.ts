@@ -23,6 +23,7 @@ import { seasonsNowResolver } from './shared/resolvers/seasons-now.resolver';
 import { seasonsUpcomingResolver } from './shared/resolvers/seasons-upcoming.resolver';
 import { SeasonsDetailsComponent } from './shared/components/seasons-details/seasons-details.component';
 import { seasonsAnimeIdDetailsResolver } from './shared/resolvers/seasons-anime-id-details.resolver';
+import { OrderComponent } from './pages/order/order.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -77,6 +78,7 @@ const routes: Routes = [
     component: SeasonsDetailsComponent,
     resolve: { details: seasonsAnimeIdDetailsResolver },
   },
+  { path: 'order', component: OrderComponent },
   {
     path: 'about-us',
     component: InfoComponent,

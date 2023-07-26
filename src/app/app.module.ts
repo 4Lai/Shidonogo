@@ -43,6 +43,7 @@ import { SeasonsComponent } from './pages/seasons/seasons.component';
 import { SeasonsAllComponent } from './shared/components/seasons-all/seasons-all.component';
 import { SeasonsDetailsComponent } from './shared/components/seasons-details/seasons-details.component';
 import { SafePipe } from './shared/pipes/safe.pipe';
+import { OrderComponent } from './pages/order/order.component';
 
 @NgModule({
   declarations: [
@@ -85,6 +86,7 @@ import { SafePipe } from './shared/pipes/safe.pipe';
     SeasonsAllComponent,
     SeasonsDetailsComponent,
     SafePipe,
+    OrderComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [
