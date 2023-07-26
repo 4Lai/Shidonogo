@@ -78,7 +78,7 @@ const routes: Routes = [
     component: SeasonsDetailsComponent,
     resolve: { details: seasonsAnimeIdDetailsResolver },
   },
-  { path: 'order', component: OrderComponent },
+  { path: 'order/:id', component: OrderComponent },
   {
     path: 'about-us',
     component: InfoComponent,

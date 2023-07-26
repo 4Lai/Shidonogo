@@ -44,6 +44,10 @@ import { SeasonsAllComponent } from './shared/components/seasons-all/seasons-all
 import { SeasonsDetailsComponent } from './shared/components/seasons-details/seasons-details.component';
 import { SafePipe } from './shared/pipes/safe.pipe';
 import { OrderComponent } from './pages/order/order.component';
+import { OrderProductComponent } from './shared/components/order-product/order-product.component';
+import { MatStepperModule } from '@angular/material/stepper';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -87,8 +91,17 @@ import { OrderComponent } from './pages/order/order.component';
     SeasonsDetailsComponent,
     SafePipe,
     OrderComponent,
+    OrderProductComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    MatStepperModule,
+    MatButtonModule,
+    BrowserAnimationsModule,
+  ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true },
   ],

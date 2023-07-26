@@ -1,0 +1,23 @@
+<div class="background-container">
+  <mat-horizontal-stepper linear class="order-product-container">
+    <mat-step label="Shipping" completed="false">
+      <p>Shipping address</p>
+      <div>
+        <button mat-raised-button color="primary" matStepperNext>Next</button>
+      </div>
+    </mat-step>
+    <mat-step label="Billing" completed="false">
+      <p>Billing address details</p>
+      <div>
+        <button mat-raised-button matStepperPrevious>Back</button>
+        <button mat-raised-button color="primary" matStepperNext>Next</button>
+      </div>
+    </mat-step>
+    <mat-step label="Order-Details" completed="false">
+      <p>Order Details</p>
+      <div>
+        <button mat-raised-button matStepperPrevious>Back</button>
+      </div>
+    </mat-step>
+  </mat-horizontal-stepper>
+</div>
