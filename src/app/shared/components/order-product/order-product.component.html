@@ -1,22 +1,168 @@
 <div class="background-container">
   <mat-horizontal-stepper linear class="order-product-container">
-    <mat-step label="Shipping" completed="false">
-      <p>Shipping address</p>
-      <div>
-        <button mat-raised-button color="primary" matStepperNext>Next</button>
-      </div>
+    <mat-step label="Shipment details" [completed]="orderData.valid">
+      <h1>Details</h1>
+      <hr />
+      <form [formGroup]="orderData" (ngSubmit)="checkData()">
+        <input
+          placeholder="Name"
+          id="name"
+          type="text"
+          formControlName="name"
+        />
+        <p class="p-invalid" *ngIf="name && name.invalid && name.touched">
+          Enter a proper value!
+        </p>
+        <br />
+        <input
+          placeholder="Last name"
+          id="last-name"
+          type="text"
+          formControlName="lastName"
+        />
+        <p
+          class="p-invalid"
+          *ngIf="lastName && lastName.invalid && lastName.touched"
+        >
+          Enter a proper value!
+        </p>
+        <br />
+        <input
+          placeholder="Email"
+          id="email"
+          type="email"
+          formControlName="email"
+        />
+        <p class="p-invalid" *ngIf="email && email.invalid && email.touched">
+          Enter a proper value!
+        </p>
+        <br />
+        <input
+          placeholder="Phone number: xxx-xxx-xxxx"
+          type="tel"
+          id="phone"
+          formControlName="phone"
+          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+        />
+        <p class="p-invalid" *ngIf="phone && phone.invalid && phone.touched">
+          Enter a proper value!
+        </p>
+        <br />
+        <input
+          placeholder="Street"
+          type="text"
+          id="street"
+          formControlName="street"
+        />
+        <p class="p-invalid" *ngIf="street && street.invalid && street.touched">
+          Enter a proper value!
+        </p>
+        <br />
+        <input
+          placeholder="House number"
+          type="text"
+          id="houseNumber"
+          formControlName="houseNumber"
+        />
+        <p
+          class="p-invalid"
+          *ngIf="houseNumber && houseNumber.invalid && houseNumber.touched"
+        >
+          Enter a proper value!
+        </p>
+        <br />
+        <input
+          placeholder="Zip code"
+          id="zipCode"
+          type="text"
+          formControlName="zipCode"
+        />
+        <p
+          class="p-invalid"
+          *ngIf="zipCode && zipCode.invalid && zipCode.touched"
+        >
+          Enter a proper value!
+        </p>
+        <br />
+        <input
+          placeholder="Place"
+          id="place"
+          type="text"
+          formControlName="place"
+        />
+        <p class="p-invalid" *ngIf="place && place.invalid && place.touched">
+          Enter a proper value!
+        </p>
+        <br />
+
+        <div>
+          <button
+            class="button-right"
+            mat-raised-button
+            color="primary"
+            [disabled]="orderData.invalid"
+            matStepperNext
+          >
+            Next
+          </button>
+        </div>
+      </form>
     </mat-step>
-    <mat-step label="Billing" completed="false">
-      <p>Billing address details</p>
-      <div>
+
+    <mat-step label="Summary">
+      <h1>Preview</h1>
+      <hr />
+      <div class="element-preview-container">
+        <img
+          src="{{ this.orderNow.data.attributes.posterImage.tiny }}"
+          alt=""
+        />
+        <span class="preview-text"
+          >{{ this.orderNow.data.attributes.canonicalTitle }} book</span
+        >
+        <span class="preview-text">Price: $12.99</span>
+        <span class="preview-text">Quantity: 1</span>
+      </div>
+      <hr />
+      <div class="summary-el-container">
+        <p class="summary-p">First name and last name:</p>
+        <p class="summary-p">
+          {{ orderData.value.name }} {{ orderData.value.lastName }}
+        </p>
+      </div>
+      <div class="summary-el-container">
+        <p class="summary-p">Email:</p>
+        <p class="summary-p">{{ orderData.value.email }}</p>
+      </div>
+      <div class="summary-el-container">
+        <p class="summary-p">Phone number:</p>
+        <p class="summary-p">{{ orderData.value.phone }}</p>
+      </div>
+      <div class="summary-el-container">
+        <p class="summary-p">Street and house number:</p>
+        <p class="summary-p">
+          {{ orderData.value.street }} {{ orderData.value.houseNumber }}
+        </p>
+      </div>
+      <div class="summary-el-container">
+        <p class="summary-p">Place and zip code:</p>
+        <p class="summary-p">
+          {{ orderData.value.place }} {{ orderData.value.zipCode }}
+        </p>
+      </div>
+      <div class="button-spacing">
         <button mat-raised-button matStepperPrevious>Back</button>
         <button mat-raised-button color="primary" matStepperNext>Next</button>
       </div>
     </mat-step>
-    <mat-step label="Order-Details" completed="false">
-      <p>Order Details</p>
-      <div>
-        <button mat-raised-button matStepperPrevious>Back</button>
+
+    <mat-step label="Finalizing">
+      <div class="centre-finalizing-container">
+        <h1>Finalizing</h1>
+        <hr />
+        <h2>Thanks for purchase!</h2>
+        <img src="../../../../assets/img/smile.png" alt="" />
+        <app-back-to-home></app-back-to-home>
       </div>
     </mat-step>
   </mat-horizontal-stepper>

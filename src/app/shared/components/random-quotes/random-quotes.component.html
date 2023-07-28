@@ -8,13 +8,12 @@
     </h5>
     <img
       class="random-quotes--header-container--img"
-      (click)="scroll(target)"
       (click)="randomQuotes()"
       src="{{ this.dataService.randomQuotesData[0].img }}"
       alt=""
     />
   </div>
-  <div class="random-quotes--content" #target>
+  <div class="random-quotes--content">
     <app-random-quotes-content [myData]="myData"></app-random-quotes-content>
   </div>
 </div>

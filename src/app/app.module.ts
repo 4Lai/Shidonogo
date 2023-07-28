@@ -36,7 +36,7 @@ import { LoadingInterceptor } from './shared/interceptors/loading.interceptor';
 import { InfoComponent } from './pages/info/info.component';
 import { AboutInfoComponent } from './shared/components/about-info/about-info.component';
 import { SearchComponent } from './shared/components/search/search.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TopCharactersComponent } from './pages/top-characters/top-characters.component';
 import { TopCharactersListComponent } from './shared/components/top-characters-list/top-characters-list.component';
 import { SeasonsComponent } from './pages/seasons/seasons.component';
@@ -98,6 +98,7 @@ import { MatButtonModule } from '@angular/material/button';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
     MatStepperModule,
     MatButtonModule,
     BrowserAnimationsModule,

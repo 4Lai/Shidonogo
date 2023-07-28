@@ -33,11 +33,4 @@ export class RandomQuotesComponent {
       `.random-quotes--header-container--action`
     )!.textContent = 'Try again!';
   }
-  scroll(el: HTMLElement) {
-    el.scrollIntoView({
-      behavior: 'smooth',
-      block: 'center',
-      inline: 'center',
-    });
-  }
 }

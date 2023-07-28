@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FeaturedBookInterface } from '../../services/featured-book-recommended.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-featured-book',
@@ -10,12 +9,14 @@ import { Router } from '@angular/router';
 export class FeaturedBookComponent implements OnInit {
   expanded: boolean = false;
   curRoute: string = '';
+  id: string;
   @Input({ required: true }) featuredBook: any;
 
-  constructor(private route: Router) {}
+  constructor(private route: Router, private activatedRoute: ActivatedRoute) {}
 
   ngOnInit(): void {
     this.curRoute = this.route.url;
+    this.id = this.activatedRoute.snapshot.params['id'];
   }
 
   expandDesc() {

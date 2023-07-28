@@ -43,7 +43,10 @@
           Read more
         </button>
       </div>
-      <a routerLink="/order/{{ featuredBook.id }}" class="featured-book--order"
+      <a
+        *ngIf="featuredBook.type !== 'anime'"
+        routerLink="/order/{{ featuredBook.id }}"
+        class="featured-book--order"
         >Order now</a
       >
     </div>
