@@ -47,12 +47,22 @@ h2 {
   background-color: inherit;
 }
 
+.label {
+  display: block;
+  @media only screen and (min-width: 0px) and (max-width: 374px) {
+    display: none;
+  }
+  @media only screen and (min-width: 375px) and (max-width: 640px) {
+    display: none;
+  }
+}
+
 .order-product-container {
-  // min-height: 90vh;
-  width: 60%;
   background-color: inherit;
-  margin: auto auto;
-  padding: 0;
+  @media only screen and (min-width: 1201px) and (max-width: 2560px) {
+    width: 60%;
+    margin: auto auto;
+  }
 }
 
 .p-invalid {
@@ -67,7 +77,21 @@ h2 {
 
 .summary-p {
   color: black;
-  font-size: 1.8rem;
+  @media only screen and (min-width: 0px) and (max-width: 374px) {
+    font-size: 1.2rem;
+  }
+  @media only screen and (min-width: 375px) and (max-width: 640px) {
+    font-size: 1.2rem;
+  }
+  @media only screen and (min-width: 641px) and (max-width: 960px) {
+    font-size: 1.3rem;
+  }
+  @media only screen and (min-width: 961px) and (max-width: 1200px) {
+    font-size: 1.8rem;
+  }
+  @media only screen and (min-width: 1201px) and (max-width: 2560px) {
+    font-size: 1.8rem;
+  }
 }
 
 .summary-el-container {
@@ -83,15 +107,31 @@ h2 {
 
 .element-preview-container {
   background-color: #fff;
-  padding: 2rem;
+  gap: 2rem;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   margin-bottom: 4rem;
+  padding: 2rem;
 }
 
 .preview-text {
   font-size: 2.4rem;
+  @media only screen and (min-width: 0px) and (max-width: 374px) {
+    font-size: 1.2rem;
+  }
+  @media only screen and (min-width: 375px) and (max-width: 640px) {
+    font-size: 1.2rem;
+  }
+  @media only screen and (min-width: 641px) and (max-width: 960px) {
+    font-size: 1.3rem;
+  }
+  @media only screen and (min-width: 961px) and (max-width: 1200px) {
+    font-size: 2.4rem;
+  }
+  @media only screen and (min-width: 1201px) and (max-width: 2560px) {
+    font-size: 2.4rem;
+  }
 }
 
 .button-spacing {
@@ -101,4 +141,8 @@ h2 {
 
 .centre-finalizing-container {
   margin: auto auto;
+}
+
+.smile-image {
+  width: 90%;
 }
