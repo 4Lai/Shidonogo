@@ -1,5 +1,9 @@
 <div class="background-container">
-  <mat-horizontal-stepper linear class="order-product-container">
+  <mat-horizontal-stepper
+  [orientation]="(stepperOrientation | async)!"
+    linear
+    class="order-product-container"
+  >
     <mat-step label="Shipment details" [completed]="orderData.valid">
       <h1>Details</h1>
       <hr />
@@ -42,7 +46,6 @@
           type="tel"
           id="phone"
           formControlName="phone"
-          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
         />
         <p class="p-invalid" *ngIf="phone && phone.invalid && phone.touched">
           Enter a proper value!
@@ -113,7 +116,7 @@
       <h1>Preview</h1>
       <hr />
       <div class="element-preview-container">
-        <img
+        <img class="preview-image"
           src="{{ this.orderNow.data.attributes.posterImage.tiny }}"
           alt=""
         />

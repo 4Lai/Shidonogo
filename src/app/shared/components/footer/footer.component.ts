@@ -8,5 +8,6 @@ import { FooterDataService } from '../../services/footer-data.service';
 })
 export class FooterComponent {
   dataService = this.data;
+  
   constructor(private data: FooterDataService) {}
 }

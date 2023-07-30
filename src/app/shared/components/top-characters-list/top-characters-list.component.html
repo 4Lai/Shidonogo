@@ -61,7 +61,12 @@
       <tr
         class="ranking-list"
         [ngClass]="{ odd: i % 2 !== 0 }"
-        *ngIf="searchText === '' || el.name.toLowerCase().includes(searchText)"
+        *ngIf="
+          searchText === '' ||
+          el.name.toLowerCase().includes(searchText) ||
+          el.name.toUpperCase().includes(searchText) ||
+          el.name.includes(searchText)
+        "
       >
         <td class="ranking-list-rank">
           {{ this.swtichSort === false ? i + 1 : 25 - i }}

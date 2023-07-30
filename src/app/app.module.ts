@@ -4,7 +4,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AnimeListComponent } from './pages/anime-list/anime-list.component';
-import { AnimeSingleComponent } from './pages/anime-single/anime-single.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
@@ -48,13 +47,13 @@ import { OrderProductComponent } from './shared/components/order-product/order-p
 import { MatStepperModule } from '@angular/material/stepper';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
+import { ClickOutsideDirective } from './shared/directives/click-outside.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AnimeListComponent,
-    AnimeSingleComponent,
     NotFoundComponent,
     HeaderComponent,
     FooterComponent,
@@ -92,6 +91,7 @@ import { MatButtonModule } from '@angular/material/button';
     SafePipe,
     OrderComponent,
     OrderProductComponent,
+    ClickOutsideDirective,
   ],
   imports: [
     BrowserModule,

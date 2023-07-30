@@ -14,10 +14,10 @@ export class FeaturedMangaComponent {
     private data: FeaturedMangaDataService
   ) {}
 
-  divToggle = true;
-  isIcon = false;
-  isIconUp = true;
-  dataFrom = this.data;
+  divToggle: boolean = true;
+  isIcon: boolean = false;
+  isIconUp: boolean = true;
+  dataFrom: any = this.data;
 
   featuredReadToggle() {
     this.divToggle = !this.divToggle;

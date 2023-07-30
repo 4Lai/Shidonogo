@@ -66,7 +66,7 @@
     >
       <div
         class="genre-single"
-        *ngIf="searchText === '' || el.title.toLowerCase().includes(searchText)"
+        *ngIf="searchText === '' || el.title.toLowerCase().includes(searchText) || el.title.includes(searchText) || el.title.toUpperCase().includes(searchText)"
       >
         <div class="genre-single-smaller-container">
           <p>

@@ -16,7 +16,6 @@ export class NewsletterComponent {
         inputData
       )
       .subscribe((val) => {
-        console.log(val);
       });
   }
 }

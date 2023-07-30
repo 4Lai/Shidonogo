@@ -47,16 +47,6 @@ h2 {
   background-color: inherit;
 }
 
-.label {
-  display: block;
-  @media only screen and (min-width: 0px) and (max-width: 374px) {
-    display: none;
-  }
-  @media only screen and (min-width: 375px) and (max-width: 640px) {
-    display: none;
-  }
-}
-
 .order-product-container {
   background-color: inherit;
   @media only screen and (min-width: 1201px) and (max-width: 2560px) {
@@ -77,6 +67,7 @@ h2 {
 
 .summary-p {
   color: black;
+  font-size: 1.8rem;
   @media only screen and (min-width: 0px) and (max-width: 374px) {
     font-size: 1.2rem;
   }
@@ -144,5 +135,14 @@ h2 {
 }
 
 .smile-image {
-  width: 90%;
+  width: 80%;
+}
+
+.preview-image {
+  @media only screen and (min-width: 0px) and (max-width: 374px) {
+    width: 50px;
+  }
+  @media only screen and (min-width: 375px) and (max-width: 640px) {
+    width: 50px;
+  }
 }

@@ -10,7 +10,6 @@ import { NavigationDataService } from '../../services/navigation-data.service';
 export class NavComponent implements OnInit {
   isMenuOpened: boolean = false;
   navigationData = this.navData.dataLinks;
-  clickedIndex: number = -1;
   date: any = new Date().toLocaleTimeString();
 
   constructor(private router: Router, private navData: NavigationDataService) {}
@@ -25,6 +24,10 @@ export class NavComponent implements OnInit {
     } else {
       this.router.navigate(['/home']);
     }
+  }
+
+  clickedOutside(): void {
+    this.isMenuOpened = false;
   }
 
   ngOnInit(): void {
