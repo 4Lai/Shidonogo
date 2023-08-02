@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { map } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -11,6 +12,12 @@ export class TopCharactersService {
     return this.http.get<TopCharacterListInterface>(
       `https://api.jikan.moe/v4/top/characters`
     );
+  }
+
+  getCharactersByPage(page: number) {
+    return this.http.get<TopCharacterListInterface>(
+      `https://api.jikan.moe/v4/top/characters` + '?page=' + page
+    )
   }
 }
 

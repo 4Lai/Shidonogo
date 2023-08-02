@@ -69,7 +69,11 @@
         "
       >
         <td class="ranking-list-rank">
-          {{ this.swtichSort === false ? i + 1 : 25 - i }}
+          {{
+            this.swtichSort === false
+              ? (this.indexOfPage - 1) * 25 + (i + 1)
+              : (this.indexOfPage - 1) * 25 + (25 - i)
+          }}
         </td>
         <td class="ranking-list-character">
           <div>
@@ -93,5 +97,11 @@
         </td>
       </tr>
     </ng-container>
+    <mat-paginator
+      [length]="this.length"
+      [pageSize]="this.pageSize"
+      (page)="onPageChange($event)"
+      aria-label="Select"
+    ></mat-paginator>
   </tbody>
 </div>

@@ -48,6 +48,7 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { ClickOutsideDirective } from './shared/directives/click-outside.directive';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -102,6 +103,7 @@ import { ClickOutsideDirective } from './shared/directives/click-outside.directi
     MatStepperModule,
     MatButtonModule,
     BrowserAnimationsModule,
+    MatPaginatorModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true },
