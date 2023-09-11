@@ -7,7 +7,6 @@ import { AnimeListComponent } from './pages/anime-list/anime-list.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
-import { RandomQuotesComponent } from './shared/components/random-quotes/random-quotes.component';
 import { AnimeRecomendedComponent } from './shared/components/anime-recomended/anime-recomended.component';
 import { BooksRecomendedComponent } from './shared/components/books-recomended/books-recomended.component';
 import { FeaturedBookComponent } from './shared/components/featured-book/featured-book.component';
@@ -16,7 +15,6 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { LinkComponent } from './shared/components/link/link.component';
 import { ModalComponent } from './shared/components/modal/modal.component';
 import { IframeComponent } from './shared/components/iframe/iframe.component';
-import { RandomQuotesContentComponent } from './shared/components/random-quotes-content/random-quotes-content.component';
 import { LinkFooterComponent } from './shared/components/link-footer/link-footer.component';
 import { NavComponent } from './shared/components/nav/nav.component';
 import { SingleRecommendedComponent } from './shared/components/single-recommended/single-recommended.component';
@@ -58,7 +56,6 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     NotFoundComponent,
     HeaderComponent,
     FooterComponent,
-    RandomQuotesComponent,
     AnimeRecomendedComponent,
     BooksRecomendedComponent,
     FeaturedBookComponent,
@@ -66,7 +63,6 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     LinkComponent,
     ModalComponent,
     IframeComponent,
-    RandomQuotesContentComponent,
     LinkFooterComponent,
     NavComponent,
     SingleRecommendedComponent,
@@ -103,7 +99,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatStepperModule,
     MatButtonModule,
     BrowserAnimationsModule,
-    MatPaginatorModule
+    MatPaginatorModule,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true },
