@@ -47,6 +47,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { ClickOutsideDirective } from './shared/directives/click-outside.directive';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
 
 @NgModule({
   declarations: [
@@ -100,9 +101,12 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatButtonModule,
     BrowserAnimationsModule,
     MatPaginatorModule,
+    NgxMaskDirective,
+    NgxMaskPipe,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true },
+    provideNgxMask(),
   ],
   bootstrap: [AppComponent],
 })

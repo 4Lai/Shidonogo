@@ -1,5 +1,7 @@
 .anime-recommended-container {
-  background-image: url("/assets/img/imggg/5265-seriesheaders-op-2000x800_ac25.jpg");
+  background-image: linear-gradient(black, brown),
+    url("/assets/img/imggg/5265-seriesheaders-op-2000x800_ac25.jpg");
+  background-blend-mode: saturation;
   background-size: cover;
   margin: 2.5rem auto;
   margin-bottom: 0;
@@ -19,13 +21,13 @@
     align-items: center;
   }
   &--header-container {
+    text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
     margin-left: 1.6rem;
     margin-right: 1.6rem;
     overflow: hidden;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-
     @media only screen and (min-width: 1201px) and (max-width: 1800px) {
       width: 60%;
     }
@@ -60,8 +62,7 @@
         display: block;
       }
       &:hover {
-        text-decoration: underline;
-        color: white;
+        color: brown;
         transition: 0.25s;
       }
     }
